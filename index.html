@@ -314,8 +314,9 @@
   .start .dec.hld { background: color-mix(in srgb, var(--royal) 13%, var(--surface-2)); color: var(--royal-bright); }
 
   /* pitcher card flip (front = game log, back = season stats) */
-  .pcard { cursor: pointer; perspective: 1000px; }
-  .pcard .pc-inner { transition: transform .16s ease; will-change: transform; }
+  .pcard { cursor: pointer; }
+  .pcard .pc-inner { transition: height .28s cubic-bezier(.2,.7,.2,1), opacity .14s ease, transform .14s ease; }
+  .pcard .pc-inner.flipping { opacity: 0; transform: scale(.985); }
   .pcard .pc-back { display: none; }
   .pcard.is-flipped .pc-front { display: none; }
   .pcard.is-flipped .pc-back { display: block; }
@@ -627,13 +628,29 @@
 })();
 
 (function () {
+  // Fade the face out, swap it, then ease the tile's height to the new
+  // content — the back (rundown) is usually taller than the front, and
+  // animating the height keeps that resize from snapping.
   function flip(card) {
     var inner = card.querySelector(".pc-inner");
-    inner.style.transform = "rotateY(90deg)";
+    if (inner.dataset.busy) return;
+    inner.dataset.busy = "1";
+    var h0 = inner.offsetHeight;
+    inner.style.height = h0 + "px";
+    inner.classList.add("flipping");
     setTimeout(function () {
       card.classList.toggle("is-flipped");
-      inner.style.transform = "rotateY(0deg)";
-    }, 150);
+      inner.style.height = "auto";
+      var h1 = inner.offsetHeight;
+      inner.style.height = h0 + "px";
+      inner.offsetHeight;                       // force reflow so the next set animates
+      inner.style.height = h1 + "px";
+      inner.classList.remove("flipping");
+      setTimeout(function () {
+        inner.style.height = "";
+        delete inner.dataset.busy;
+      }, 280);
+    }, 130);
   }
   Array.prototype.slice.call(document.querySelectorAll(".pcard")).forEach(function (card) {
     card.addEventListener("click", function () {
