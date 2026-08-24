@@ -19,7 +19,7 @@ three are custom additions beyond the auto-generated stats:
 | 1-Run | record in one-run games |
 | Sweeps | series sweeps |
 | Shutouts | shutouts thrown |
-| Comebacks | come-from-behind wins |
+| Comebacks | come-from-behind wins, plus their share of total wins (see below) |
 | Errors | total errors |
 | Most Runs | most runs scored in a single game |
 | **Most Runs Allowed** | most runs allowed in a single game (max opponent R over all games) |
@@ -31,6 +31,11 @@ Tile markup pattern:
 
 **Pace** = project the current record over 162 games: `wins = round(winPct * 162)`,
 `losses = 162 - wins`, formatted `W-L` (e.g. 12-0 → `162-0`, an 8-4 start → `108-54`).
+
+**Comebacks** carries a second value: comeback wins as a percentage of TOTAL
+WINS, rendered with the tile's built-in `<small>` slot:
+`<div class="v num">5 <small>38.4%</small></div>`. One decimal place,
+truncated rather than rounded (5 of 13 wins = 38.4615... -> `38.4%`).
 
 **BLL (Blown Lead Losses)** = number of games where KC held a lead at any point
 and went on to LOSE that game. A true blown-lead loss. Determine "held a lead"
