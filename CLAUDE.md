@@ -37,6 +37,12 @@ WINS, rendered with the tile's built-in `<small>` slot:
 `<div class="v num">5 <small>38.4%</small></div>`. One decimal place,
 truncated rather than rounded (5 of 13 wins = 38.4615... -> `38.4%`).
 
+The `<small>` must sit flush against the tile's right edge, on the same
+baseline as the big number. That comes from `.stat .v`, which must stay a
+baseline-aligned flex row:
+`display: flex; align-items: baseline; justify-content: space-between; gap: 6px;`
+Tiles with a single value are unaffected (one flex item sits at flex-start).
+
 **BLL (Blown Lead Losses)** = number of games where KC held a lead at any point
 and went on to LOSE that game. A true blown-lead loss. Determine "held a lead"
 from the inning-by-inning recap (box scores only show finals). While the team is

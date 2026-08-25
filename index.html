@@ -153,8 +153,13 @@
     padding: 12px 10px; box-shadow: var(--shadow);
   }
   .stat .k { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-mute); font-weight: 700; }
-  .stat .v { font-size: 22px; font-weight: 800; letter-spacing: -.02em; margin-top: 3px; }
-  .stat .v small { font-size: 12px; font-weight: 600; color: var(--ink-mute); }
+  .stat .v {
+    font-size: 22px; font-weight: 800; letter-spacing: -.02em; margin-top: 3px;
+    /* big number left, optional <small> secondary value flush right on the
+       same baseline; single-value tiles are unaffected (one flex item) */
+    display: flex; align-items: baseline; justify-content: space-between; gap: 6px;
+  }
+  .stat .v small { font-size: 12px; font-weight: 600; color: var(--ink-mute); white-space: nowrap; }
   .stat .v.good { color: var(--win); }
 
   /* ---- Story / "Around the Numbers" ---- */
