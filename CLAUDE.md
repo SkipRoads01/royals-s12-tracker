@@ -83,3 +83,36 @@ Use, by context:
   use ASCII (`->`, `--`) in comments. Note the sort-key regex must still match
   the en-dash that entities decode to in the DOM, so write it with the escape:
   `/^(\d+)[\u2013-](\d+)$/`.
+
+## 5. "Recent Headlines" section (Overview)
+
+The Overview panel must carry a `Recent Headlines` section between `Inside the
+Numbers` and `Game Log`, subtitle `current form`. It covers **player-level
+recent form** — active hitting streaks, streaks just snapped, short hot/cold
+runs, recent baserunning. Keep it distinct from `Inside the Numbers`, which
+stays **team-level season context** (records, paces, rate stats). Do not repeat
+a fact in both; in particular, hitting-streak lines belong here, not there.
+
+Markup: a `.hl-card` wrapper holding one `.hl` row per headline:
+
+```html
+<div class="hl"><div class="hl-fig num">14</div><div>
+  <div class="hl-k">Hit streak</div>
+  <div class="hl-txt"><b>Garcia</b> has hit safely in every game this season.</div>
+</div></div>
+```
+
+- `.hl-fig` is a fixed-width, right-aligned column so 1- and 2-digit figures
+  share a right edge and every headline's text starts at the same x.
+- Add `past` to the figure (`class="hl-fig num past"`) for anything in the past
+  tense — a snapped streak, a cold stretch. It renders muted instead of blue so
+  those items recede.
+- The figure carries the number; the sentence must add NEW information rather
+  than restating it (write "extended it with a 3-for-4 night", not "riding a
+  12-game streak" next to a `12`).
+- Aim for ~6 rows, active/positive items first, past-tense items last.
+
+**Derive streaks from the recaps, never by assumption.** A streak spans games
+the player actually appeared in — a game missed does not break it (Perez's
+12-game streak skips G10, when he did not play). Verify any derivation against
+known values before publishing.
