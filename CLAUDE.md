@@ -116,3 +116,19 @@ Markup: a `.hl-card` wrapper holding one `.hl` row per headline:
 the player actually appeared in — a game missed does not break it (Perez's
 12-game streak skips G10, when he did not play). Verify any derivation against
 known values before publishing.
+
+## 6. Game-card chips
+
+Game-log cards carry optional tag chips in `<span class="tags">`. When a game
+earns no chip, omit the `tags` span entirely rather than emitting an empty one.
+The vocabulary so far:
+
+| Chip | Class | Meaning |
+|---|---|---|
+| Sweep | `chip gold` | series sweep completed |
+| Shutout | `chip gold` | KC threw a shutout |
+| Walk-off | `chip gold` | KC won it in its last at-bat |
+| Comeback | `chip blue` | KC trailed at some point and won |
+
+Gold marks a rare team accomplishment, blue a game-shape note. A game can carry
+more than one (G15 is both Comeback and Walk-off).
