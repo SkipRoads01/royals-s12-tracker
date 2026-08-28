@@ -132,3 +132,32 @@ The vocabulary so far:
 
 Gold marks a rare team accomplishment, blue a game-shape note. A game can carry
 more than one (G15 is both Comeback and Walk-off).
+
+## 7. Pitching Leaders — "3-Pitch K Looking" tile
+
+The Pitching Leaders grid must carry a `3-Pitch K Looking` tile, placed last,
+after `K Looking`. The three K tiles therefore run in order: `3-Pitch K`,
+`K Looking`, `3-Pitch K Looking`.
+
+**3-Pitch K Looking** = the batter struck out on three pitches AND took the
+third one for a called strike. It is its own stat, not a synonym for either
+neighbour:
+
+| Tile | Counts |
+|---|---|
+| `3-Pitch K` | any strikeout on three pitches, swinging or looking |
+| `K Looking` | any strikeout ending on a called third strike, at any count |
+| `3-Pitch K Looking` | both at once — three pitches, third one called |
+
+It is a subset of each of the other two, so a pitcher's `3-Pitch K Looking`
+total can never exceed either. In the game notes it appears verbatim as
+"3-pitch K looking" (e.g. G16 TOP 9, `Hays 3-pitch K looking`), and that
+phrasing is the only thing that counts — a bare "0-2 K" does not, even though
+it also took three pitches. The same event increments all three tiles.
+
+The season totals already live in the Pitching Splits tile of the same name;
+the leaders tile shows the top of that rundown.
+
+**Ties show every leader.** `.lead` stacks one `.row` per name, and the grid
+row absorbs the extra height, so emit a row for each pitcher on the top mark
+rather than picking one (Cameron and Leahy both sit on 3 through G16).
