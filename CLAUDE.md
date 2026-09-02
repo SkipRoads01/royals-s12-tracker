@@ -23,7 +23,7 @@ three are custom additions beyond the auto-generated stats:
 | Errors | total errors |
 | Most Runs | most runs scored in a single game |
 | **Most Runs Allowed** | most runs allowed in a single game (max opponent R over all games) |
-| **Pace** | projected 162-game record at the current win rate |
+| **Pace** | projected 162-game record at the current win rate (**only from game 10 on** — see below) |
 | **BLL** | Blown Lead Losses (see definition below) |
 
 Tile markup pattern:
@@ -31,6 +31,12 @@ Tile markup pattern:
 
 **Pace** = project the current record over 162 games: `wins = round(winPct * 162)`,
 `losses = 162 - wins`, formatted `W-L` (e.g. 12-0 → `162-0`, an 8-4 start → `108-54`).
+
+**Pace is omitted entirely until 10 games have been played.** A projection off
+two or three games is noise, not a record. Before game 10, do not emit the tile
+at all — no dash, no placeholder — so the strip carries 11 tiles early and 12
+from game 10 on. This is the only conditional tile; every other tile above is
+always present, including `BLL` at 0.
 
 **Comebacks** carries a second value: comeback wins as a percentage of TOTAL
 WINS, rendered with the tile's built-in `<small>` slot:
@@ -161,3 +167,80 @@ the leaders tile shows the top of that rundown.
 **Ties show every leader.** `.lead` stacks one `.row` per name, and the grid
 row absorbs the extra height, so emit a row for each pitcher on the top mark
 rather than picking one (Cameron and Leahy both sit on 3 through G16).
+
+## 8. Sample-size discipline — write like a baseball writer
+
+`Inside the Numbers` and `Recent Headlines` are prose. They must read the way a
+beat writer would actually write, not the way a spreadsheet would. A stat that
+is technically correct but that nobody covering the sport would ever say does
+not go on the page.
+
+### 8.1 No 162-game extrapolations before 25 games
+
+Do NOT project any counting stat over a full season until **25 games** have been
+played. No "162-homer pace" off an opening-day home run, no "972-run pace" off a
+six-run game, and the same for RBI, stolen bases, doubles, strikeouts, saves, or
+anything else. Before game 25 the honest framing is the raw total and the game
+it came in.
+
+This covers prose only. The `Pace` tile has its own, earlier threshold (game 10,
+see section 1) because a projected W-L is a standings convention rather than a
+claim about a player.
+
+| Games played | Allowed |
+|---|---|
+| 1&ndash;9 | raw totals, game shape, what actually happened |
+| 10&ndash;24 | the above, plus the `Pace` tile |
+| 25+ | the above, plus season-long extrapolations in prose |
+
+### 8.2 No streak or record framing until the streak is one
+
+A streak needs to exist before it is a story:
+
+- Do not name a win or loss streak in prose until it reaches **4 games**. One
+  win is a win. (The header `streak-pill` — `W1`, `L2` — is exempt: it is the
+  standings-style current-streak indicator every scoreboard carries, not a
+  note.)
+- Do not invoke a franchise or MLB record as a comparison unless the team or
+  player is realistically in range of it: within **3** of the mark, and never
+  before game 25 for a season-long record. "12 more wins would tie the record
+  for a season-opening win streak" after one win is exactly the line to cut.
+
+### 8.3 Rate stats need a sample
+
+Do not present a rate stat whose whole content is one game restated. After one
+start, "a 2.00 team ERA" and "14.0 K/9" are just "two earned runs" and "14
+strikeouts" wearing a disguise; write the plain version. Minimums before a rate
+stat may be quoted in prose:
+
+| Stat | Minimum |
+|---|---|
+| Team ERA, opponent AVG, K/9, team AVG/OPS | 10 team games |
+| Individual AVG / OBP / SLG / OPS | 25 plate appearances |
+| Individual ERA / WHIP | 15 innings pitched |
+
+Below the minimum, use the counting stat and the context ("two hits in the
+opener", not "hitting .500").
+
+### 8.4 Everything must trace to the recaps
+
+Every figure and every claim in these two sections must be derivable from the
+game notes on the page — the box scores and the inning-by-inning recaps. Do not
+assume, round up, or carry a fact forward from an earlier build without
+re-deriving it. Do not invent record-book context; if a record is cited, it must
+be one that is actually verifiable, and section 8.2 still gates whether it
+belongs at all.
+
+### 8.5 Grammar
+
+Agree number with the value: "through 1 game", not "through 1 games"; "1 home
+run", not "1 home runs". This bites most often on opening day, when nearly every
+count is 1.
+
+### 8.6 When there is little to say, say little
+
+The sections are sized to the season, not to a template. `Inside the Numbers`
+aims for ~6 bullets by midseason but should carry only 3&ndash;4 after a game or
+two; padding it is what produces the lines this section exists to forbid.
+`Recent Headlines` is the opposite case — single-game detail is exactly its
+subject matter, so it can run its usual ~6 rows from game 1.
