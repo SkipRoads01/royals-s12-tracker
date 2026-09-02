@@ -244,3 +244,13 @@ aims for ~6 bullets by midseason but should carry only 3&ndash;4 after a game or
 two; padding it is what produces the lines this section exists to forbid.
 `Recent Headlines` is the opposite case — single-game detail is exactly its
 subject matter, so it can run its usual ~6 rows from game 1.
+
+## 9. Always publish
+
+Finish the job. When a change to this site is done, put it on `main` and push
+it, so the live GitHub Pages build has it. Do not park work on a side branch and
+ask whether to publish, do not open a pull request, and do not ask a second time
+for something already agreed. Publishing is the default and needs no approval.
+
+If a change is genuinely risky or ambiguous, ask the one question before doing
+the work, then publish the result.
