@@ -280,3 +280,21 @@ Rules:
 
 If a value is genuinely unknown, leave the whole meta line off rather than
 invent or half-fill it. A card with no meta renders fine.
+
+### 10.1 Every pitcher on the staff gets a card
+
+Both panels list the whole staff, not only the arms that have appeared. A
+pitcher who has not yet thrown carries his meta line and a single `Has not
+pitched` row where his game log would go; his season stats are `0` for the
+counting columns and `&mdash;` for ERA, WHIP, K/9 and BAA, which have no value
+at 0 IP. The panel subtitle counts both: `2 of 5 used`, `6 of 8 used`.
+
+Cards for arms that have pitched come first, in order of first appearance;
+those that have not follow, in roster order.
+
+### 10.2 Decision chips
+
+`.dec` chips on a game line come in `w`, `l`, `nd`, `sv` and `hld`. A starter
+always carries one &mdash; `ND` included, since a start with no decision is
+still a fact about the start. A reliever carries one only when he earned it
+(`W`, `L`, `SV`, `HLD`); an ordinary middle-innings outing gets no chip.
