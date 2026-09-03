@@ -251,6 +251,13 @@ a recap generator writes.
 - **One idea to a sentence.** Prefer a period to a semicolon; prefer an active
   verb to a noun phrase ("Mears faced three men and retired none", not "Mears
   recorded no outs against three batters faced").
+- **Innings are numerals with an ordinal suffix** &mdash; `the 7th`, `the 2nd`,
+  `the 9th`, never `the seventh`. This is how a box score and a broadcast both
+  write them.
+- **Avoid `that` as a pointer back to an earlier bullet** &mdash; `that lead`,
+  `that seventh`, `that inning`. Each bullet has to stand on its own, so name
+  the thing or restate the number: "to go from two runs down to a 5&ndash;4
+  lead", not "turned that lead into a deficit".
 - **Use the sport's own idiom** where it is the plainer wording &mdash; went
   down on strikes, the other way, singled home, first one to get away, on the
   year. Avoid inventing color that the recaps do not support; section 8.4 still
