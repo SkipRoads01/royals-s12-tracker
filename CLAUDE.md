@@ -254,3 +254,29 @@ for something already agreed. Publishing is the default and needs no approval.
 
 If a change is genuinely risky or ambiguous, ask the one question before doing
 the work, then publish the result.
+
+## 10. Pitcher card meta lines
+
+Every card in `Starters` and `Relievers` carries a `starter-meta` line under
+the name. It holds roster data, not game data, and the format differs by kind:
+
+| Kind | Format | Example |
+|---|---|---|
+| Starter | `AGE/GRADE/RATING (SALARY/YEARS)` | `28/B/83 (4.4/2)` |
+| Reliever | `ROLE &middot; HAND &middot; AGE/GRADE/RATING (SALARY/YEARS)` | `SU &middot; R &middot; 29/C/70 (1.9/1)` |
+
+Rules:
+
+- **Role** is the roster role (`CP`, `SU`, `MRP`, `LRP`), not the role the arm
+  happened to fill in a game. A reliever who worked the ninth once is still
+  `MRP` if that is his listed role. When a pitcher carries an alternate
+  position, join it with a slash: `LRP/SP`.
+- **Hand** is `L` or `R`. The game notes mark only lefties, as `(L)` after the
+  name on entry (`Hentges (L) pitching`); an unmarked pitcher is `R`.
+- **Salary** keeps the roster's own units &mdash; `820k` stays `820k`, millions
+  are bare numbers (`1.9`, `11.1`). **Years** is the contract length.
+- Starters omit role and hand; the panel they sit in already says starter, and
+  handedness for them shows up in the game notes.
+
+If a value is genuinely unknown, leave the whole meta line off rather than
+invent or half-fill it. A card with no meta renders fine.
