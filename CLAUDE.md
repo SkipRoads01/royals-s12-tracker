@@ -237,7 +237,26 @@ Agree number with the value: "through 1 game", not "through 1 games"; "1 home
 run", not "1 home runs". This bites most often on opening day, when nearly every
 count is 1.
 
-### 8.6 When there is little to say, say little
+### 8.6 Voice: short, active, and in the vernacular
+
+Write these two sections the way a broadcast or beat writer talks, not the way
+a recap generator writes.
+
+- **Name the club `KC` or `the Royals`.** `Kansas City` is fine once for
+  variety but reads formal on a page that is entirely about them.
+- **Do not lean on `it`.** A clause like "the 4&ndash;2 edge it carried into the
+  seventh is the first lead it has given away" is two pronouns chasing one
+  noun. Recast so the subject is concrete, or drop the pronoun outright: "the
+  4&ndash;2 lead in the seventh was the first one to get away."
+- **One idea to a sentence.** Prefer a period to a semicolon; prefer an active
+  verb to a noun phrase ("Mears faced three men and retired none", not "Mears
+  recorded no outs against three batters faced").
+- **Use the sport's own idiom** where it is the plainer wording &mdash; went
+  down on strikes, the other way, singled home, first one to get away, on the
+  year. Avoid inventing color that the recaps do not support; section 8.4 still
+  governs the facts.
+
+### 8.7 When there is little to say, say little
 
 The sections are sized to the season, not to a template. `Inside the Numbers`
 aims for ~6 bullets by midseason but should carry only 3&ndash;4 after a game or
