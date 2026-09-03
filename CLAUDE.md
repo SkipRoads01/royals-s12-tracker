@@ -164,6 +164,13 @@ it also took three pitches. The same event increments all three tiles.
 The season totals already live in the Pitching Splits tile of the same name;
 the leaders tile shows the top of that rundown.
 
+**A category nobody has recorded has no leader.** When the top mark in a
+leaders category is `0` &mdash; no saves yet, no walks drawn yet &mdash; do not
+crown the first name off the roster. Emit a single row reading `None yet` with
+the `0`, the same wording the splits rundowns use. Naming a starter as the
+saves leader because everyone is tied at zero is exactly the kind of line
+section 8 exists to keep off the page. This applies to both leaders grids.
+
 **Ties show every leader.** `.lead` stacks one `.row` per name, and the grid
 row absorbs the extra height, so emit a row for each pitcher on the top mark
 rather than picking one (Cameron and Leahy both sit on 3 through G16).
