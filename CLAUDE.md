@@ -229,7 +229,20 @@ stat may be quoted in prose:
 Below the minimum, use the counting stat and the context ("two hits in the
 opener", not "hitting .500").
 
-### 8.4 Everything must trace to the recaps
+### 8.4 Walks are scarce in this game &mdash; a low total is not a story
+
+Walks come far less often in this franchise than in real baseball. A small walk
+count is the normal state of things here, not a finding, so it does not earn a
+line. Do not write "21 hits and not one walk," "the offense has drawn three
+walks all year," or any comparison of the team's walk rate to a real-life one.
+The same goes for the staff's walk total.
+
+A walk that *did* something is fair game, because the story is the inning
+rather than the count: one that loaded the bases, forced in a run, or set up
+the go-ahead hit. Atlanta's 7th in G2 &mdash; three doubles and a walk, and the
+walk scored &mdash; is the shape that earns a mention.
+
+### 8.5 Everything must trace to the recaps
 
 Every figure and every claim in these two sections must be derivable from the
 game notes on the page — the box scores and the inning-by-inning recaps. Do not
@@ -238,13 +251,13 @@ re-deriving it. Do not invent record-book context; if a record is cited, it must
 be one that is actually verifiable, and section 8.2 still gates whether it
 belongs at all.
 
-### 8.5 Grammar
+### 8.6 Grammar
 
 Agree number with the value: "through 1 game", not "through 1 games"; "1 home
 run", not "1 home runs". This bites most often on opening day, when nearly every
 count is 1.
 
-### 8.6 Voice: short, active, and in the vernacular
+### 8.7 Voice: short, active, and in the vernacular
 
 Write these two sections the way a broadcast or beat writer talks, not the way
 a recap generator writes.
@@ -267,10 +280,10 @@ a recap generator writes.
   lead", not "turned that lead into a deficit".
 - **Use the sport's own idiom** where it is the plainer wording &mdash; went
   down on strikes, the other way, singled home, first one to get away, on the
-  year. Avoid inventing color that the recaps do not support; section 8.4 still
+  year. Avoid inventing color that the recaps do not support; section 8.5 still
   governs the facts.
 
-### 8.7 When there is little to say, say little
+### 8.8 When there is little to say, say little
 
 The sections are sized to the season, not to a template. `Inside the Numbers`
 aims for ~6 bullets by midseason but should carry only 3&ndash;4 after a game or
