@@ -262,7 +262,7 @@ the name. It holds roster data, not game data, and the format differs by kind:
 
 | Kind | Format | Example |
 |---|---|---|
-| Starter | `AGE/GRADE/RATING (SALARY/YEARS)` | `28/B/83 (4.4/2)` |
+| Starter | `HAND &middot; AGE/GRADE/RATING (SALARY/YEARS)` | `R &middot; 28/B/83 (4.4/2)` |
 | Reliever | `ROLE &middot; HAND &middot; AGE/GRADE/RATING (SALARY/YEARS)` | `SU &middot; R &middot; 29/C/70 (1.9/1)` |
 
 Rules:
@@ -271,12 +271,15 @@ Rules:
   happened to fill in a game. A reliever who worked the ninth once is still
   `MRP` if that is his listed role. When a pitcher carries an alternate
   position, join it with a slash: `LRP/SP`.
-- **Hand** is `L` or `R`. The game notes mark only lefties, as `(L)` after the
-  name on entry (`Hentges (L) pitching`); an unmarked pitcher is `R`.
+- **Hand** is `L` or `R`, and every pitcher carries one. The notes and the
+  roster mark only lefties, as `(L)` after the name (`Hentges (L) pitching`).
+  **An unmarked pitcher is right-handed** &mdash; that is the convention, not an
+  absence of data, so never leave the hand off because no `(L)` appeared, and
+  never carry real-world handedness over a roster that says otherwise. The same
+  rule reads the opponents in `Opp Pitching`, whose subtitle states it.
 - **Salary** keeps the roster's own units &mdash; `820k` stays `820k`, millions
   are bare numbers (`1.9`, `11.1`). **Years** is the contract length.
-- Starters omit role and hand; the panel they sit in already says starter, and
-  handedness for them shows up in the game notes.
+- Starters omit only the role; the panel they sit in already says starter.
 
 If a value is genuinely unknown, leave the whole meta line off rather than
 invent or half-fill it. A card with no meta renders fine.
