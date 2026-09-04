@@ -823,7 +823,9 @@ the mark has room to read.
 `Errata` is the last tab (`p-errata`). It holds splits that exist only in the
 inning-by-inning notes and nowhere in a box score, so every figure on it is
 derived by reading the recaps &mdash; section 8.5 governs it exactly as it
-governs the prose. Cross-check what can be cross-checked before publishing: the
+governs the prose, and the `Odds and Ends` list is prose: section 8.8's bolding
+rule binds it, so `<b>11 of KC's 16 hard-hit balls (69%)</b>`, never
+`<b>11</b> of KC's 16 hard-hit balls`. Cross-check what can be cross-checked before publishing: the
 hits-by-count table must total the season hit count, its `First pitch` row must
 equal the `FP Hits` split, and the stolen-base rows must total the `SB` column
 of `Team Batting`.
