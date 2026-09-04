@@ -619,6 +619,14 @@ The crest and title are one `<button class="mast-home">` that returns to the
 `Overview` panel from anywhere on the site. It carries no visible chrome; the
 title turns blue on hover so the target is discoverable.
 
+The banner is meant to read big: the crest is **108px** tall (`.crest`, and the
+`img` inside it) and `.mast-title` is **34px at weight 850**. Under 560px they
+step down to 68px and 23px so the sticky header does not eat a phone screen.
+
+**There is no subtitle.** `MLB The Show franchise &middot; Regular season` used
+to sit under the title and was removed; do not reintroduce a `.mast-sub` line
+or any other tagline. The title stands alone beside the crest.
+
 The stamp on the right is **`Through G{n}` over the publish date**, and both
 move with every publish. `Through G1` sat there for three games because it was
 never wired to anything &mdash; treat it as part of the regeneration, not
