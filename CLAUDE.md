@@ -462,6 +462,23 @@ the game and the moment where one exists ("the leadoff double he gave up in the
 A player who has not appeared gets `Has not played.` or `Has not pitched.` and
 nothing more.
 
+### 11.2 Player names are clickable wherever they appear
+
+The card opens from the `Roster` table and from every player name on the
+`Overview` panel &mdash; both leaders grids and the Team Batting and Team
+Pitching tables. Overview uses surnames, so each button still carries the full
+`data-p` slug: `<button type="button" class="pname" data-p="kyleisbel">Isbel</button>`.
+A `None yet` row is never a button.
+
+In a leaders tile the name keeps the normal ink colour (`.lead .pname { color:
+inherit }`) and only turns blue on hover, because the value beside it is already
+blue and two blues in one row read as noise. In the tables the name is blue, as
+on the Roster page.
+
+**`#pmodal` must sit outside every `.panel`.** Panels are `display: none` when
+inactive, so a modal parked inside one opens invisibly from anywhere else. It
+belongs between the last panel and the footer.
+
 Markup: a hidden `<div class="pm-body" id="pm-{slug}">` per player, cloned into
 `#pmodal` on click; `{slug}` is the full name lowercased with non-alphanumerics
 stripped. Closing works on the backdrop, the X, and Escape.
