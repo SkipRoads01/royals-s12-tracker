@@ -368,6 +368,10 @@ Rules:
 If a value is genuinely unknown, leave the whole meta line off rather than
 invent or half-fill it. A card with no meta renders fine.
 
+Cards in `Starters` and `Relievers` use the pitcher's **full name** on both
+faces, not the surname the recaps and tables use. `POG` cards and the split
+tiles share the `.starter-name` class and are not affected.
+
 ### 10.1 Every pitcher on the staff gets a card
 
 Both panels list the whole staff, not only the arms that have appeared. A
@@ -569,3 +573,19 @@ The series record is KC's mark against that opponent this season and must match
 the club's row in `vs. Divisions`; before the clubs have met it is `0-0`. The
 tile always describes the **next unplayed game**, so it moves on after every
 publish and disappears once game 162 is in the book.
+
+
+## 16. Handedness splits and the challenge log
+
+`Batting Splits` carries **AVG vs RHP** and **AVG vs LHP** tiles. Split KC's
+at-bats by the handedness of the pitcher on the mound, which the `Opp Pitching`
+table already records &mdash; lefties are marked `(L)`, everyone else is a
+righty (section 10). The tile's `st-sub` reads `N for M` and the back lists each
+arm faced with KC's line against him, hits first.
+
+The `Challenges` table names **who challenged on the Royals side**, as a `.sub`
+line under the record: `Santana 2, Lowe 1` for batter challenges. Opponents stay
+anonymous by design. A batter challenge is attributed to the batter named in the
+recap; a catcher challenge belongs to whoever was catching, which the recaps do
+not state, so those are listed by game and inning until the catcher is known.
+Never guess the catcher from the lineup when two are in it.
