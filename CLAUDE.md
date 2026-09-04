@@ -178,6 +178,13 @@ the `0`, the same wording the splits rundowns use. Naming a starter as the
 saves leader because everyone is tied at zero is exactly the kind of line
 section 8 exists to keep off the page. This applies to both leaders grids.
 
+**Nobody leads a category without appearing.** A leaders row requires the
+player to have actually played: a hitter needs a plate appearance, a pitcher an
+appearance on the mound. A pitcher at 0 IP has no ERA, no WHIP and no
+strikeouts &mdash; his card reads `N/A` per section 10.3, and `N/A` is never a
+value that can top a list. The `min` in the grid's subtitle is the floor, not
+the only test.
+
 **Ties show every leader.** `.lead` stacks one `.row` per name, and the grid
 row absorbs the extra height, so emit a row for each pitcher on the top mark
 rather than picking one (Cameron and Leahy both sit on 3 through G16).
