@@ -350,9 +350,30 @@ still a fact about the start. A reliever carries one only when he earned it
 
 ## 11. Roster page player cards
 
-On the `Roster` page, every player whose `League` is `MLB` has a clickable name
-that opens a season card. Minor leaguers stay as plain text &mdash; the card is
-about how a season is going, and theirs is not being tracked here.
+On the `Roster` page every player's name is clickable and opens a card. What
+the card holds depends on the level.
+
+**Big leaguers** get a headshot, a season stat line and a note on how the season
+is going. **Minor leaguers** get their affiliate's logo, their roster numbers,
+and a line on their 40-man and service status &mdash; no season stats and no
+prose about form, because none is tracked below the majors. Never invent one.
+
+The three affiliate logos are Royals-specific and come from
+`www.mlbstatic.com/team-logos/{teamId}.svg`:
+
+| League | Affiliate | Team id |
+|---|---|---|
+| `AAA` | Omaha Storm Chasers | 541 |
+| `AA` | Northwest Arkansas Naturals | 1350 |
+| `A` | Quad Cities River Bandits (High-A) | 565 |
+
+The game carries one A level; it is mapped to the High-A club. Columbia
+Fireflies (3705) is the Low-A affiliate if that ever turns out to be the better
+match.
+
+Each logo is defined **once**, as a base64 SVG background on a `.mlogo.lv-*`
+class, and every card references the class. Never inline the image per player
+&mdash; 64 copies of a 10KB logo would add most of a megabyte for nothing.
 
 Each card carries three things:
 
