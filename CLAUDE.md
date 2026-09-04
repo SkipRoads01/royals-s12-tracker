@@ -93,11 +93,18 @@ Use, by context:
 ## 5. "Recent Headlines" section (Overview)
 
 The Overview panel must carry a `Recent Headlines` section between `Inside the
-Numbers` and `Game Log`, subtitle `current form`. It covers **player-level
-recent form** — active hitting streaks, streaks just snapped, short hot/cold
-runs, recent baserunning. Keep it distinct from `Inside the Numbers`, which
-stays **team-level season context** (records, paces, rate stats). Do not repeat
-a fact in both; in particular, hitting-streak lines belong here, not there.
+Numbers` and `Game Log`. It takes **no subtitle** — the heading stands on its
+own. It covers **player-level** notes: active hitting streaks, streaks just
+snapped, short hot/cold runs, recent baserunning, a start or a relief outing.
+Keep it distinct from `Inside the Numbers`, which stays **team-level season
+context**. Do not repeat a fact in both; hitting-streak lines belong here.
+
+**Every row names the game or series it comes from** — `in G3`, `in the 8-2
+win at ATL`, `in all 3 games at ATL`. Never a bare "in the finale".
+
+**A row need not be about the last game.** The upcoming series is fair game
+— a homestand starting, a first look at an opponent — as long as it is
+drawn from the schedule already on the page rather than invented.
 
 Markup: a `.hl-card` wrapper holding one `.hl` row per headline:
 
