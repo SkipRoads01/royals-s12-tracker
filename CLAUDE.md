@@ -285,9 +285,11 @@ a recap generator writes.
   `that seventh`, `that inning`. Each bullet has to stand on its own, so name
   the thing or restate the number: "to go from two runs down to a 5&ndash;4
   lead", not "turned that lead into a deficit".
-- **Use the sport's own idiom** where it is the plainer wording &mdash; went
-  down on strikes, the other way, singled home, first one to get away, on the
-  year. Avoid inventing color that the recaps do not support; section 8.5 still
+- **Reach for the plain verb first.** `homered`, not "went deep"; `4 of the 13
+  were home runs`, not "went over the wall"; `struck out 11`, not "went down on
+  strikes". The sport's idiom is welcome only where it is genuinely the plainest
+  wording &mdash; the other way, singled home, on the year. Invented color the
+  recaps do not support is worse than a flat sentence, and section 8.5 still
   governs the facts.
 
 ### 8.8 Numerals for stats, and locate every stat in a game or series
@@ -304,6 +306,10 @@ a recap generator writes.
   it. A line about one game or one series must say which.
 - **Quantify a vague plural.** `Lowe made 2 errors`, never "made both errors"
   &mdash; the reader should not have to look up how many both is.
+- **Bold the whole stat expression, never a fragment of it.** `<b>4 of the 13
+  (31%)</b>` and `<b>14 of KC's 34 hits (41%)</b>` &mdash; not `<b>4</b> of the
+  13 (31%)`. The count, what it is out of, and the percentage are one figure and
+  are emphasized as one.
 
 Section 8.3 still governs *which* stats may appear at all; this section governs
 how the ones that qualify are written.
