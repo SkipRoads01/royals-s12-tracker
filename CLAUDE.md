@@ -396,12 +396,34 @@ counting columns and `N/A` for ERA, WHIP, K/9 and BAA, which have no value at
 Cards for arms that have pitched come first, in order of first appearance;
 those that have not follow, in roster order.
 
-### 10.2 Decision chips
+### 10.2 A game line carries two results
 
-`.dec` chips on a game line come in `w`, `l`, `nd`, `sv` and `hld`. A starter
-always carries one &mdash; `ND` included, since a start with no decision is
-still a fact about the start. A reliever carries one only when he earned it
-(`W`, `L`, `SV`, `HLD`); an ordinary middle-innings outing gets no chip.
+Each game line on a pitcher card says what the PITCHER did and what the TEAM
+did, in that order left to right:
+
+| Slot | Holds | Markup |
+|---|---|---|
+| beside the game number | the pitcher's own result | `<span class="pdec">(W, 1&ndash;0)</span>` or a `.dec` chip |
+| beside the opponent | the team's result in that game | `<span class="gout w">W</span>` |
+
+**The pitcher's decision sits next to `G{n}`.** A win or a loss reads as plain
+text with his record after that game &mdash; `(W, 1&ndash;0)`, `(L, 0&ndash;1)`
+&mdash; carrying no colour of its own. `ND`, `SV` and `HLD` stay as `.dec`
+chips, the grey `ND` box included. A starter always shows something here,
+`ND` included, since a start with no decision is still a fact about the start;
+a reliever shows something only when he earned it, so an ordinary
+middle-innings outing leaves the slot empty.
+
+**The team's result sits next to the opponent**, as a `.gout` chip &mdash;
+green `W`, red `L`, taken from the game log. **The colour coding belongs to
+this chip.** A pitcher can lose a game his club won and win one he was charged
+nothing for, so the two slots disagree often; that is the point of showing
+both. `.dec.w` and `.dec.l` no longer exist &mdash; a decision is never a
+coloured chip.
+
+The `.g` column is `84px` wide to hold `G3 (W, 1&ndash;0)`, and takes
+`align-self: start` so the game number lines up with the opponent rather than
+floating between the two lines of the body.
 
 
 ### 10.3 Empty stat values
