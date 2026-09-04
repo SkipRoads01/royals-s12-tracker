@@ -308,14 +308,17 @@ a recap generator writes.
 - **Give the percentage with any N-of-M stat.** `14 of KC's 34 hits have gone
   for extra bases (41%)`, `4 of the 13 (31%) went over the wall`. Round to a
   whole number.
-- **Name the game *and* the opponent: `in G3 vs. ATL`.** A bare `G3` says when
-  but not who, and a reader six weeks later has no idea. Use `vs. {OPP}` for
-  either venue &mdash; it reads as "against", not as a home/away marker, which
-  the schedule already carries. Once a line has named the opponent, later game
-  numbers in the same line stay bare: "led off G1 and G2 vs. ATL, then singled
-  twice in G3", not the opponent three times in one sentence. **"through three games" is too
-  vague** for a season total &mdash; use `vs. ATL` when the whole total came in
-  one series, or `last 3 games` / `last 5 games` when it did not. (The
+- **Name the game *and* the opponent: `in G3 at ATL`.** A bare `G3` says when
+  but not who, and a reader six weeks later has no idea. **The preposition
+  carries the venue**: `at {OPP}` for a road game, `vs. {OPP}` for a home one.
+  They are not interchangeable &mdash; "vs. ATL" for a game played in Atlanta
+  reads as a home series that never happened. All 3 games at Atlanta take `at
+  ATL`; the MIN set that opens G4 at Kauffman takes `vs. MIN`. Once a line has
+  named the opponent, later game numbers in the same line stay bare: "led off G1
+  and G2 at ATL, then singled twice in G3", not the opponent three times in one
+  sentence. **"through three games" is too vague** for a season total &mdash;
+  use `at ATL` / `vs. MIN` when the whole total came in one series, or `last 3
+  games` / `last 5 games` when it did not. (The
   `story-lead` line that states the record, "2-1 through 3 games", is the
   exception: it is the standings frame, not a stat locator.)
 - **Call them `KC pitchers`, not "the staff".** `Staff` stays as the totals-row
@@ -649,6 +652,15 @@ Two things matter for size:
   unprefixed properties stores every mask twice and costs another 157KB.
 
 KC's abbreviations match MLB's except **`ARI`**, which MLB serves as `AZ`.
+
+**The score does not sit on the wordmark.** The result chip and score live in
+the open space just right of the matchup, not at the far right edge, so nothing
+overlaps the mark. The row grid is `38px 72px auto 1fr` (and
+`38px 72px auto 1fr 14px` on a `.sgamed` summary, with `.chev` pinned to column
+5); `.sgame .out` is `justify-self: start`. The fixed 72px matchup column keeps
+every score on the same left edge whether the row reads `@ ATL` or `vs MIN`.
+Under 560px the wordmark narrows to `width: 34%` so it stays clear of the score
+on a phone.
 
 **Home and away.** `vs` gives the row `home`, `@` gives it `away`. Home takes a
 royal left bar and a faint royal tint; away takes a muted grey bar and no tint.
