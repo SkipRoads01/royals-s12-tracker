@@ -817,3 +817,35 @@ royal left bar and a faint royal tint; away takes a muted grey bar and no tint.
 Rows are `position: relative; overflow: hidden` and every child except `.wm`
 gets `z-index: 1` so the wordmark stays behind the text. Row padding is 13px so
 the mark has room to read.
+
+## 19. Errata page
+
+`Errata` is the last tab (`p-errata`). It holds splits that exist only in the
+inning-by-inning notes and nowhere in a box score, so every figure on it is
+derived by reading the recaps &mdash; section 8.5 governs it exactly as it
+governs the prose. Cross-check what can be cross-checked before publishing: the
+hits-by-count table must total the season hit count, its `First pitch` row must
+equal the `FP Hits` split, and the stolen-base rows must total the `SB` column
+of `Team Batting`.
+
+Sections, in order:
+
+| Section | Holds |
+|---|---|
+| Hard Contact | two tiles (KC and opponents, AVG on balls marked `HH`) and a by-batter table |
+| Hits by Count | a `Two-Strike Hits` and a `First-Pitch Hits` tile, then every KC hit by the count it came on |
+| The Middle Shift | one row per plate appearance marked `MS`, KC batters and then KC's own use of it |
+| Stolen Bases, and the Count | one row per steal with the count on the batter |
+| Odds and Ends | a `.story-list` of one-line facts |
+
+**Read the notation, never guess at it.** The page interprets only markers whose
+meaning the notes establish: `HH` (hard hit), `MS` (middle shift, written out
+as "middle shift (MS)" the first time), `FP` (first pitch), `INF hit`, `TP`
+(written out as "tough play (TP)"), and a count in parentheses before `SB`.
+**`GP` and `FB` have never been defined** &mdash; `GP` appears on 3 batted balls
+and `FB` once, before a steal &mdash; so nothing on the page depends on them.
+Leave them alone until they are defined rather than inferring a meaning.
+
+**A missing count reads `Not recorded`.** Two opponent steals and one KC hit
+carry no count in the notes. They get their own row or bucket so the totals
+still add up; never impute a count.
