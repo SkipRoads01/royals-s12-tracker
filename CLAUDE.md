@@ -558,14 +558,15 @@ are meant to be scannable at a glance.
 ## 15. Next Game tile
 
 The hero carries a `Next` tile under the record, reading left to right: a gold
-`Next` chip, the game number, the opponent's `.tlogo`, `vs`/`@` plus the
-abbreviation, and &mdash; pushed to the right edge &mdash; the season series
-record against that club with a `Season series` label beneath it.
+`Next` chip, the game number, `vs`/`@` plus the abbreviation, the opponent's
+54px `.tlogo` **after** the abbreviation, and &mdash; pushed to the right edge
+&mdash; the season series record against that club with a `Season series` label
+beneath it. As in the game log (section 14), the mark follows the letters.
 
 ```html
 <div class="nextgame"><span class="ng-k">Next</span><span class="ng-g">G4</span>
-  <span class="tlogo lg-MIN" aria-hidden="true"></span>
   <span class="ng-opp"><span class="loc">vs</span> MIN</span>
+  <span class="tlogo lg-MIN" aria-hidden="true"></span>
   <span class="ng-series"><b>0&ndash;0</b><small>Season series</small></span></div>
 ```
 
