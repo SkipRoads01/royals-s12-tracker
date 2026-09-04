@@ -834,10 +834,19 @@ Sections, in order:
 |---|---|
 | Hard Contact | two tiles (KC and opponents, AVG on balls marked `HH`) and a by-batter table |
 | Hits by Count | a `Two-Strike Hits` and a `First-Pitch Hits` tile, then every KC hit by the count it came on |
-| The Middle Shift | one row per plate appearance marked `MS`, KC batters and then KC's own use of it |
-| Bases Loaded | one row per plate appearance the notes place with the bases loaded, both clubs |
-| Stolen Bases, and the Count | one row per steal with the count on the batter |
+| The Middle Shift | tiles, then a by-batter table for KC and for the batters KC has shifted on |
+| Bases Loaded | tiles, then a by-batter table for each club |
+| Stolen Bases, and the Count | a `Count / KC / Opponents` table, then a by-runner table for each club |
 | Odds and Ends | a `.story-list` of one-line facts |
+
+**Every section aggregates first.** One row per event does not survive a
+162-game season &mdash; by August the middle-shift list alone would run to
+hundreds of rows, most of them the same handful of names. So each section leads
+with a table keyed on something bounded: a batter, a runner, or a count. The
+raw event list stays available underneath in a
+`<details class="errd"><summary>Every plate appearance</summary>` (or `Every
+steal`), which is collapsed by default and is the only place a name repeats.
+Add a new section the same way.
 
 **Read the notation, never guess at it.** The page interprets only markers whose
 meaning the notes establish: `HH` (hard hit), `MS` (middle shift, written out
