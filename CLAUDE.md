@@ -368,6 +368,25 @@ subject matter, so it can run its usual ~6 rows from game 1.
 
 ## 9. Always publish
 
+**Every publish must bump the build id in TWO places, to the same value:**
+`version.txt` at the repo root, and `<meta name="build" content="...">` in the
+`<head>` of `index.html`. Use a UTC stamp, `YYYYMMDD-HHMMSS`.
+
+This is what stops a phone from sitting on a stale copy. GitHub Pages serves
+HTML with `cache-control: max-age=600` and gives no way to change that, so the
+page checks for itself: a small script at the end of `index.html` fetches
+`version.txt` with `cache: "no-store"` &mdash; which bypasses the HTTP cache
+entirely &mdash; on load, whenever the tab becomes visible again, and on a
+back-forward restore. If the file names a build other than the document's own,
+the page reloads through `?v={build}`, a URL the browser holds no cache entry
+for. Arriving on the current build with a `?v=` attached strips it back off, so
+the address stays clean.
+
+The redirect is guarded on the `?v=` already in the address, so it fires at most
+once per build. That means a `version.txt` left out of step with the meta tag
+can waste a load but can never loop. Do not remove that guard.
+
+
 Finish the job. When a change to this site is done, put it on `main` and push
 it, so the live GitHub Pages build has it. Do not park work on a side branch and
 ask whether to publish, do not open a pull request, and do not ask a second time
