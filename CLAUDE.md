@@ -473,6 +473,9 @@ game 25, no walk-total observations, nothing that is not derivable from the
 recaps. Through two games that means "four hits in eight at-bats", never
 "hitting .500".
 
+Section 8.8 binds these notes too: numerals for stat values, and **every note
+names the game it refers to** &mdash; `in the 9th of G3`, not "in the finale".
+
 The note should say what a beat writer would say about that player right now
 &mdash; the shape of his season, not a restatement of the tiles above it. Name
 the game and the moment where one exists ("the leadoff double he gave up in the
@@ -627,11 +630,16 @@ follows the theme into dark mode without a second asset.
 
 Source them from MLB, the same place as the headshots and cap logos:
 `www.mlbstatic.com/team-logos/team-wordmark-on-light/{teamId}.svg`. Render each
-to a **72px-tall PNG and keep only the alpha channel**. Two things matter for
-size:
+to a **72px-tall PNG whose own alpha channel carries the shape** &mdash;
+`Image.merge("LA", (white, alpha))`. A CSS mask reads the image's **alpha**, so
+writing the shape into a greyscale channel and leaving the image opaque makes
+every mask resolve to "show everything" and each row paints a solid grey block.
+That is what it looks like when this is wrong.
+
+Two things matter for size:
 
 - The raw SVGs are 377KB and a greyscale raster is little better, because the
-  anti-aliased edges do not compress. The alpha-only mask is 157KB for all 30.
+  anti-aliased edges do not compress. The alpha mask is ~197KB for all 30.
 - Define the data URI **once**, as `--wm` on the `.wm-{ABBR}` class, and read it
   from `.wm` with `mask-image: var(--wm)`. Writing it into both the prefixed and
   unprefixed properties stores every mask twice and costs another 157KB.
