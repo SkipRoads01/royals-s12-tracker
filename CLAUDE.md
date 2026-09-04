@@ -21,6 +21,7 @@ three are custom additions beyond the auto-generated stats:
 | Shutouts | shutouts thrown |
 | Comebacks | come-from-behind wins, plus their share of total wins (see below) |
 | Errors | total errors |
+| **GIDP** | KC batters grounded into a double play |
 | Most Runs | most runs scored in a single game |
 | **Most Runs Allowed** | most runs allowed in a single game (max opponent R over all games) |
 | **Pace** | projected 162-game record at the current win rate (**only from game 10 on** — see below) |
@@ -122,7 +123,11 @@ Markup: a `.hl-card` wrapper holding one `.hl` row per headline:
   those items recede.
 - The figure carries the number; the sentence must add NEW information rather
   than restating it (write "extended it with a 3-for-4 night", not "riding a
-  12-game streak" next to a `12`).
+  12-game streak" next to a `12`). **Nothing is repeated** &mdash; if the
+  sentence needs to say the figure out loud, the figure is wrong. Pick the
+  number the sentence does not use, and let the `hl-k` kicker name what it is:
+  a `4` over `Strikeouts in relief` beside a sentence about innings and the win,
+  a `0` over `Earned runs` beside a sentence about 7 hits in 4.2 innings.
 - Aim for ~6 rows, active/positive items first, past-tense items last.
 
 **Derive streaks from the recaps, never by assumption.** A streak spans games
