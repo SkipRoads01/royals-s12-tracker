@@ -549,6 +549,25 @@ inherit }`) and only turns blue on hover, because the value beside it is already
 blue and two blues in one row read as noise. In the tables the name is blue, as
 on the Roster page.
 
+**In a leaders grid the whole tile is the target, not the surname.** A
+four-letter name is a poor tap target on a phone, so the tile itself is the
+button:
+
+- One leader &mdash; the tile is `<button type="button" class="lead"
+  data-p="{slug}">` and the name inside is a plain `<span class="who pname">`.
+  The `.row` inside it becomes a `<span>` too: a `<div>` is not valid inside a
+  `<button>`.
+- A tie (section 7) &mdash; the tile stays a `div.lead` because its names point
+  at different players, and each `.row` becomes
+  `<button type="button" class="row lrow" data-p="{slug}">` instead, so every
+  name still gets a full-width target.
+- `None yet` &mdash; a plain `div.lead` with a plain `.row`, no button anywhere.
+
+`button.lead` and `.lead .lrow` reset the button chrome (`appearance: none`,
+`font: inherit`, `color: inherit`, `text-align: left`, `width: 100%`) so the
+tiles look exactly as they did as divs. Hover on the tile turns the name blue,
+the same as hovering the name itself.
+
 **`#pmodal` must sit outside every `.panel`.** Panels are `display: none` when
 inactive, so a modal parked inside one opens invisibly from anywhere else. It
 belongs between the last panel and the footer.
