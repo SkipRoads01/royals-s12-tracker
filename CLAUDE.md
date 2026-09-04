@@ -356,18 +356,28 @@ about how a season is going, and theirs is not being tracked here.
 
 Each card carries three things:
 
-1. **A photo**, in a 74px square slot. 22 of the 26 carry one, embedded as a
-   base64 JPEG (148px square, quality 80, ~6KB each) and cropped to fill via
-   `object-fit: cover`. Images are always embedded, never hot-linked. A player
-   with no free photo keeps the KC mark at half opacity rather than a broken
-   image or a blank box.
+1. **A photo**, in a 74px square slot. All 26 carry one, embedded as a base64
+   JPEG. Images are always embedded, never hot-linked.
 
-   Photos come from Wikimedia Commons via the Wikipedia REST summary API, and
-   the footer credits them. Two cautions learned the hard way: **disambiguate
-   the title** &mdash; a plain `Carlos Santana` lookup returns the guitarist, so
-   query `Carlos Santana (baseball)` &mdash; and **look at what came back**
-   before publishing it. Crop square from the top of a portrait (the head sits
-   in the upper third), centered on a landscape.
+   Source them from MLB's own headshots, not from Wikipedia. Look the player up
+   by name at `statsapi.mlb.com/api/v1/people/search?names=...` to get his
+   MLBAM id, then fetch
+   `img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png,w_426,q_auto:best/v1/people/{id}/headshot/67/current`.
+   These are uniform: same framing, same flat grey ground, face centered. To fit
+   the square slot, trim the bottom 8% (jersey), scale to fit 148px, and pad to
+   148 square with the background colour sampled from a corner pixel &mdash; the
+   pad is invisible and nothing gets cropped off the head. Quality 82 lands each
+   file near 4KB.
+
+   Wikipedia photos were tried first and are worse in every way: action shots at
+   mismatched crops and angles, no coverage for younger players, and a plain
+   `Carlos Santana` lookup returns the guitarist. **Look at what you fetched
+   before publishing it** &mdash; that is what caught the guitarist.
+
+   A player may appear in another club's cap. That is correct, not a bug: the
+   headshot is his current one, and this roster is full of players acquired from
+   elsewhere.
+
 2. **A season stat line** &mdash; nine tiles for hitters
    (`G AB R H HR RBI SB AVG OPS`), ten for pitchers
    (`G W-L IP H R ER BB K ERA WHIP`). A player who has not appeared shows `0`
