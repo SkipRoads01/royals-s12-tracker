@@ -613,3 +613,33 @@ The stamp on the right is **`Through G{n}` over the publish date**, and both
 move with every publish. `Through G1` sat there for three games because it was
 never wired to anything &mdash; treat it as part of the regeneration, not
 decoration.
+
+## 18. Schedule rows: wordmarks, and home vs away
+
+Each schedule row carries the opponent's **wordmark** behind it and a left
+accent bar saying whether the game is home or away.
+
+**Wordmark.** `<span class="wm wm-ATL" aria-hidden="true">` is the first child
+of the row, absolutely positioned right, at `opacity: .13`. It is **not an
+image** &mdash; it is an alpha mask coloured by CSS (`background-color:
+var(--ink)`, `mask-image: var(--wm)`), so it is greyscale by construction and
+follows the theme into dark mode without a second asset.
+
+Source them from MLB, the same place as the headshots and cap logos:
+`www.mlbstatic.com/team-logos/team-wordmark-on-light/{teamId}.svg`. Render each
+to a **72px-tall PNG and keep only the alpha channel**. Two things matter for
+size:
+
+- The raw SVGs are 377KB and a greyscale raster is little better, because the
+  anti-aliased edges do not compress. The alpha-only mask is 157KB for all 30.
+- Define the data URI **once**, as `--wm` on the `.wm-{ABBR}` class, and read it
+  from `.wm` with `mask-image: var(--wm)`. Writing it into both the prefixed and
+  unprefixed properties stores every mask twice and costs another 157KB.
+
+KC's abbreviations match MLB's except **`ARI`**, which MLB serves as `AZ`.
+
+**Home and away.** `vs` gives the row `home`, `@` gives it `away`. Home takes a
+royal left bar and a faint royal tint; away takes a muted grey bar and no tint.
+Rows are `position: relative; overflow: hidden` and every child except `.wm`
+gets `z-index: 1` so the wordmark stays behind the text. Row padding is 13px so
+the mark has room to read.
