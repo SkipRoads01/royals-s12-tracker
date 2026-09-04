@@ -510,3 +510,32 @@ A game **with** notes becomes a dropdown; a game without one stays a plain
   game.** Notes are written before a game and the lineup can change; if they
   name a player sitting who then took four plate appearances, they belong to the
   next game, not that one. This is how the G2/G3 notes were sorted out.
+
+## 13. Clickable strip tiles
+
+`Sweeps`, `Shutouts`, `Comebacks`, `Most Runs`, `Most Runs Allowed` and `BLL`
+each refer to specific games, so each opens the game or games behind it in the
+same `#pmodal` used by player cards.
+
+- A tile with **at least one game behind it** is a `<button class="stat"
+  data-p="stat-{slug}">` and carries a `&rsaquo;` on its label line. A tile
+  sitting at **0** stays a plain `div.stat` &mdash; there is nothing to open, so
+  it gets no click affordance.
+- The modal body is `<div class="pm-body" id="pm-stat-{slug}">`: a
+  `.pm-sthead` with the tile's name and value, one `.gref` row per game, and a
+  `.gref-note` saying what earned it ("Atlanta scored 3 in the 7th to turn a
+  4-2 deficit into a 5-4 win").
+- `.gref` is the game-log row packed left &mdash; `grid-template-columns: auto
+  auto auto auto; justify-content: start` &mdash; so the box score sits beside
+  the matchup instead of across a gap, and there is no chevron.
+
+The click handler matches `[data-p]`, not `.pname`, so player names and stat
+tiles share one path.
+
+## 14. Opponent logo in game rows
+
+Game-log rows carry the opponent's mark between the location and the
+abbreviation: `<span class="loc">@</span> <span class="tlogo lg-ATL"></span>
+<span class="opp">ATL</span>`. The `.lg-*` classes already exist for all 30
+clubs, so this costs nothing. `.matchup .mteam` is a flex row and the mark is
+sized down to 17px there.
