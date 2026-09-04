@@ -635,11 +635,15 @@ a second asset.
 
 **The Royals crest is the banner's own mark and must stay the largest.** The
 league marks are deliberately small beside it &mdash; `64x33px` (MLB) and
-`44px` (AL), stepping to `52x27px` / `36px` under 860px. They are **hidden
-under 560px**: the crest, the title and the stamp already fill a phone, and
-keeping the marks there wraps the title into the stamp. `.mast-title` and
-`.updated` carry `white-space: nowrap` so a tight width can never produce that
-wrap.
+`44px` (AL), stepping to `52x27px` / `36px` under 860px.
+
+**They stay visible on a phone.** The stamp and the `.leagues` stack share a
+`.mast-right` group: side by side down to 560px, and below that the group turns
+vertical &mdash; stamp on top, the two marks in a row beneath it (`44x23px` and
+`24px`) &mdash; with the crest at 62px and the title at 20px. That fits a 360px
+screen. `.mast-title` and `.updated` carry `white-space: nowrap`, so a tight
+width can never wrap the title into the stamp; if something has to give at a
+narrower width, shrink the marks rather than dropping them.
 
 **There is no subtitle.** `MLB The Show franchise &middot; Regular season` used
 to sit under the title and was removed; do not reintroduce a `.mast-sub` line
