@@ -585,8 +585,12 @@ righty (section 10). The tile's `st-sub` reads `N for M` and the back lists each
 arm faced with KC's line against him, hits first.
 
 The `Challenges` table names **who challenged on the Royals side**, as a `.sub`
-line under the record: `Santana 2, Lowe 1` for batter challenges. Opponents stay
-anonymous by design. A batter challenge is attributed to the batter named in the
-recap; a catcher challenge belongs to whoever was catching, which the recaps do
-not state, so those are listed by game and inning until the catcher is known.
-Never guess the catcher from the lineup when two are in it.
+line under the record: `Perez 4`, `Santana 2, Lowe 1`. Opponents stay anonymous
+by design.
+
+A batter challenge is attributed to the batter named in the recap. A catcher
+challenge belongs to whoever was catching, and **Perez is the catcher unless the
+pre-game roster notes say otherwise** &mdash; Jensen is the backup and a start
+behind the plate for him will be called out in those notes (section 12). Two
+catchers appearing in the same lineup does not mean the backup caught; the
+other is at DH.
