@@ -539,3 +539,22 @@ abbreviation: `<span class="loc">@</span> <span class="tlogo lg-ATL"></span>
 <span class="opp">ATL</span>`. The `.lg-*` classes already exist for all 30
 clubs, so this costs nothing. `.matchup .mteam` is a flex row and the mark is
 sized down to 17px there.
+
+## 15. Next Game tile
+
+The hero carries a `Next` tile under the record, reading left to right: a gold
+`Next` chip, the game number, the opponent's `.tlogo`, `vs`/`@` plus the
+abbreviation, and &mdash; pushed to the right edge &mdash; the season series
+record against that club with a `Season series` label beneath it.
+
+```html
+<div class="nextgame"><span class="ng-k">Next</span><span class="ng-g">G4</span>
+  <span class="tlogo lg-MIN" aria-hidden="true"></span>
+  <span class="ng-opp"><span class="loc">vs</span> MIN</span>
+  <span class="ng-series"><b>0&ndash;0</b><small>Season series</small></span></div>
+```
+
+The series record is KC's mark against that opponent this season and must match
+the club's row in `vs. Divisions`; before the clubs have met it is `0-0`. The
+tile always describes the **next unplayed game**, so it moves on after every
+publish and disappears once game 162 is in the book.
