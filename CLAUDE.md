@@ -842,9 +842,11 @@ Sections, in order:
 meaning the notes establish: `HH` (hard hit), `MS` (middle shift, written out
 as "middle shift (MS)" the first time), `FP` (first pitch), `INF hit`, `TP`
 (written out as "tough play (TP)"), and a count in parentheses before `SB`.
-**`GP` and `FB` have never been defined** &mdash; `GP` appears on 3 batted balls
-and `FB` once, before a steal &mdash; so nothing on the page depends on them.
-Leave them alone until they are defined rather than inferring a meaning.
+**`GP` and `FB` have never been defined.** `GP` marks 3 batted balls and gets
+its own tile and by-batter table, headed simply `GP` &mdash; the page counts the
+marker without claiming to know what it stands for, and the heading gets a real
+name only once the notes give one. `FB` appears once, before a steal, and
+nothing reads it. Never infer a meaning for either.
 
 **A missing count reads `Not recorded`.** Two opponent steals and one KC hit
 carry no count in the notes. They get their own row or bucket so the totals
