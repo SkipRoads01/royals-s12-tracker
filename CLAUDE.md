@@ -594,3 +594,15 @@ pre-game roster notes say otherwise** &mdash; Jensen is the backup and a start
 behind the plate for him will be called out in those notes (section 12). Two
 catchers appearing in the same lineup does not mean the backup caught; the
 other is at DH.
+
+
+## 17. Masthead
+
+The crest and title are one `<button class="mast-home">` that returns to the
+`Overview` panel from anywhere on the site. It carries no visible chrome; the
+title turns blue on hover so the target is discoverable.
+
+The stamp on the right is **`Through G{n}` over the publish date**, and both
+move with every publish. `Through G1` sat there for three games because it was
+never wired to anything &mdash; treat it as part of the regeneration, not
+decoration.
