@@ -568,9 +568,9 @@ lg-ATL"></span>`. The `.lg-*` classes already exist for all 30 clubs, so this
 costs nothing.
 
 It is a **51px** mark in the game log (`.matchup .mteam .tlogo`) &mdash; large
-enough to read as the club's identity rather than a bullet point. The compact
-`.gref` rows inside a stat tile's modal keep a 17px version, since those rows
-are meant to be scannable at a glance.
+enough to read as the club's identity rather than a bullet point. The `.gref`
+rows inside a stat tile's modal carry the **same 51px** mark
+(`.gref .mu .tlogo`), so a game reads the same wherever it appears.
 
 ## 15. Next Game tile
 
