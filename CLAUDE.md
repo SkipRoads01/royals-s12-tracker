@@ -265,6 +265,13 @@ re-deriving it. Do not invent record-book context; if a record is cited, it must
 be one that is actually verifiable, and section 8.2 still gates whether it
 belongs at all.
 
+**Check whether a single-game note is actually a single-game note.** Before
+writing "in G3", derive the same figure for every other game played. A fact
+that also happened in G1 is a series point, and pinning it to one game reads as
+though that game owned it. "All 9 Royals starters had a hit in G3" was true, and
+wrong for exactly this reason &mdash; all 9 had a hit in G1 too, and only G2
+broke it up at 6 of 9.
+
 ### 8.6 Grammar
 
 Agree number with the value: "through 1 game", not "through 1 games"; "1 home
