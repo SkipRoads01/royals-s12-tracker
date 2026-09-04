@@ -623,6 +623,22 @@ The banner is meant to read big: the crest is **108px** tall (`.crest`, and the
 `img` inside it) and `.mast-title` is **34px at weight 850**. Under 560px they
 step down to 68px and 23px so the sticky header does not eat a phone screen.
 
+**The league marks bookend the banner.** The American League logo sits at the
+far left of `.mast-in`, before the `mast-home` button, and the MLB logo at the
+far right, after the `updated` stamp. Both are `<span class="leaguemark
+lm-al">` / `lm-mlb` with the artwork as a base64 **SVG** background &mdash;
+vector, so they stay sharp at any size, and pure ASCII per section 4. Source
+them from MLB, the same place as everything else:
+`www.mlbstatic.com/team-logos/league-on-light/103.svg` (American League) and
+`.../league-on-light/1.svg` (MLB). Only the on-light variants exist; both marks
+carry white outlines, so they read fine in dark mode without a second asset.
+
+They are `84px` (AL) and `92x48px` (MLB), stepping to `60px` / `66x34px` under
+860px, and are **hidden under 560px** &mdash; the crest, the title and the stamp
+already fill a phone, and keeping the marks there wraps the title into the
+stamp. `.mast-title` and `.updated` carry `white-space: nowrap` so a tight
+width can never produce that wrap.
+
 **There is no subtitle.** `MLB The Show franchise &middot; Regular season` used
 to sit under the title and was removed; do not reintroduce a `.mast-sub` line
 or any other tagline. The title stands alone beside the crest.
