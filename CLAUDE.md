@@ -835,6 +835,7 @@ Sections, in order:
 | Hard Contact | two tiles (KC and opponents, AVG on balls marked `HH`) and a by-batter table |
 | Hits by Count | a `Two-Strike Hits` and a `First-Pitch Hits` tile, then every KC hit by the count it came on |
 | The Middle Shift | one row per plate appearance marked `MS`, KC batters and then KC's own use of it |
+| Bases Loaded | one row per plate appearance the notes place with the bases loaded, both clubs |
 | Stolen Bases, and the Count | one row per steal with the count on the batter |
 | Odds and Ends | a `.story-list` of one-line facts |
 
@@ -847,6 +848,12 @@ its own tile and by-batter table, headed simply `GP` &mdash; the page counts the
 marker without claiming to know what it stands for, and the heading gets a real
 name only once the notes give one. `FB` appears once, before a steal, and
 nothing reads it. Never infer a meaning for either.
+
+**`BASES LOADED` is a marker at a point in time, not a state the notes keep
+updating.** Count the plate appearance right after it, and keep counting only
+while the notes themselves say the bases stayed loaded &mdash; Garcia's "F9, no
+tag" in G2 leaves them loaded for Witt, while a hit or a run scoring ends the
+situation. Never infer a base state the notes do not state.
 
 **A missing count reads `Not recorded`.** Two opponent steals and one KC hit
 carry no count in the notes. They get their own row or bucket so the totals
