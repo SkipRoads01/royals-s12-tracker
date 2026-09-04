@@ -335,8 +335,8 @@ invent or half-fill it. A card with no meta renders fine.
 Both panels list the whole staff, not only the arms that have appeared. A
 pitcher who has not yet thrown carries his meta line and a single `Has not
 pitched` row where his game log would go; his season stats are `0` for the
-counting columns and `&mdash;` for ERA, WHIP, K/9 and BAA, which have no value
-at 0 IP. The panel subtitle counts both: `2 of 5 used`, `6 of 8 used`.
+counting columns and `N/A` for ERA, WHIP, K/9 and BAA, which have no value at
+0 IP. The panel subtitle counts both: `2 of 5 used`, `6 of 8 used`.
 
 Cards for arms that have pitched come first, in order of first appearance;
 those that have not follow, in roster order.
@@ -347,6 +347,15 @@ those that have not follow, in roster order.
 always carries one &mdash; `ND` included, since a start with no decision is
 still a fact about the start. A reliever carries one only when he earned it
 (`W`, `L`, `SV`, `HLD`); an ordinary middle-innings outing gets no chip.
+
+
+### 10.3 Empty stat values
+
+A rate stat with no value yet &mdash; ERA, WHIP, K/9 or BAA at 0 IP, AVG or OPS
+at 0 AB &mdash; reads `N/A`, never a dash. Counting stats in the same row still
+read `0`, because zero is the true count. `INF` is not the same thing and stays
+as it is: a pitcher charged with earned runs without recording an out has a
+genuinely infinite ERA, which is a result rather than a blank.
 
 ## 11. Roster page player cards
 
@@ -402,8 +411,8 @@ Each card carries three things:
 2. **A season stat line** &mdash; nine tiles for hitters
    (`G AB R H HR RBI SB AVG OPS`), ten for pitchers
    (`G W-L IP H R ER BB K ERA WHIP`). A player who has not appeared shows `0`
-   for counting stats and `&mdash;` for the rates, exactly as the pitcher cards
-   in section 10.1 do.
+   for counting stats and `N/A` for the rates, exactly as the pitcher cards in
+   section 10.1 do.
 3. **One or two sentences on how the season is going**, good or bad.
 
 ### 11.1 The note is prose, so section 8 governs it
