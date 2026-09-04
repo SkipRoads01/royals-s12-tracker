@@ -347,3 +347,42 @@ those that have not follow, in roster order.
 always carries one &mdash; `ND` included, since a start with no decision is
 still a fact about the start. A reliever carries one only when he earned it
 (`W`, `L`, `SV`, `HLD`); an ordinary middle-innings outing gets no chip.
+
+## 11. Roster page player cards
+
+On the `Roster` page, every player whose `League` is `MLB` has a clickable name
+that opens a season card. Minor leaguers stay as plain text &mdash; the card is
+about how a season is going, and theirs is not being tracked here.
+
+Each card carries three things:
+
+1. **A photo slot**, 74px square. Until real player images are supplied it
+   holds the KC mark at half opacity; when one exists, swap in
+   `<img src="data:image/jpeg;base64,...">`, which fills the slot via
+   `object-fit: cover`. Images must be embedded, never hot-linked.
+2. **A season stat line** &mdash; nine tiles for hitters
+   (`G AB R H HR RBI SB AVG OPS`), ten for pitchers
+   (`G W-L IP H R ER BB K ERA WHIP`). A player who has not appeared shows `0`
+   for counting stats and `&mdash;` for the rates, exactly as the pitcher cards
+   in section 10.1 do.
+3. **One or two sentences on how the season is going**, good or bad.
+
+### 11.1 The note is prose, so section 8 governs it
+
+The stat tiles may show `AVG` and `OPS` at any sample, because the Team Batting
+table already does. **The note may not.** It is prose and every rule in section
+8 applies: no rate stat below the section 8.3 minimums, no extrapolation before
+game 25, no walk-total observations, nothing that is not derivable from the
+recaps. Through two games that means "four hits in eight at-bats", never
+"hitting .500".
+
+The note should say what a beat writer would say about that player right now
+&mdash; the shape of his season, not a restatement of the tiles above it. Name
+the game and the moment where one exists ("the leadoff double he gave up in the
+7th came around to score"), and be as willing to write a bad one as a good one.
+A player who has not appeared gets `Has not played.` or `Has not pitched.` and
+nothing more.
+
+Markup: a hidden `<div class="pm-body" id="pm-{slug}">` per player, cloned into
+`#pmodal` on click; `{slug}` is the full name lowercased with non-alphanumerics
+stripped. Closing works on the backdrop, the X, and Escape.
