@@ -610,7 +610,7 @@ Markup: a hidden `<div class="pm-body" id="pm-{slug}">` per player, cloned into
 `#pmodal` on click; `{slug}` is the full name lowercased with non-alphanumerics
 stripped. Closing works on the backdrop, the X, and Escape.
 
-## 12. Schedule roster notes
+## 12. Schedule line-up changes
 
 A game in the `Schedule` panel may carry **pre-game roster notes** &mdash;
 lineup and position changes made before first pitch. They are not part of every
@@ -619,12 +619,15 @@ game's notes, so most rows never have them.
 A game **with** notes becomes a dropdown; a game without one stays a plain
 `div.sgame` row. Never emit an empty dropdown.
 
+**The heading inside the dropdown reads `Line-up Changes`** (`.rn-k` uppercases
+it). It used to say `Roster Notes`; do not go back to that.
+
 ```html
 <details class="sgamed next"><summary class="sgame"><span class="g">G3</span>
   <span class="mu"><span class="loc">@</span> <span class="opp">ATL</span></span>
   <div class="out"><span class="nextchip">Next</span></div>
   <span class="chev">&rsaquo;</span></summary>
-  <div class="rnotes"><div class="rn-k">Roster Notes</div>
+  <div class="rnotes"><div class="rn-k">Line-up Changes</div>
     <p>Garcia has been moved to CF, with Pasquantino taking 3B and Isbel sitting.</p>
   </div></details>
 ```
