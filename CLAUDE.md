@@ -854,11 +854,15 @@ Add a new section the same way.
 meaning the notes establish: `HH` (hard hit), `MS` (middle shift, written out
 as "middle shift (MS)" the first time), `FP` (first pitch), `INF hit`, `TP`
 (written out as "tough play (TP)"), and a count in parentheses before `SB`.
-**`GP` and `FB` have never been defined.** `GP` marks 3 batted balls and gets
-its own tile and by-batter table, headed simply `GP` &mdash; the page counts the
-marker without claiming to know what it stands for, and the heading gets a real
-name only once the notes give one. `FB` appears once, before a steal, and
-nothing reads it. Never infer a meaning for either.
+**`GP` has never been defined.** It marks 3 batted balls and gets its own tile
+and by-batter table, headed simply `GP` &mdash; the page counts the marker
+without claiming to know what it stands for, and the heading gets a real name
+only once the notes give one. Never infer a meaning for it.
+
+**Ask about a marker rather than reading past it.** `FB` appeared once, before
+White's steal in the 3rd of G2, and turned out to be a typo for `FP`; the steal
+was a first-pitch steal all along. Flag anything unfamiliar instead of filing it
+under "not recorded".
 
 **`BASES LOADED` is a marker at a point in time, not a state the notes keep
 updating.** Count the plate appearance right after it, and keep counting only
@@ -866,6 +870,9 @@ while the notes themselves say the bases stayed loaded &mdash; Garcia's "F9, no
 tag" in G2 leaves them loaded for Witt, while a hit or a run scoring ends the
 situation. Never infer a base state the notes do not state.
 
-**A missing count reads `Not recorded`.** Two opponent steals and one KC hit
-carry no count in the notes. They get their own row or bucket so the totals
-still add up; never impute a count.
+**A missing count reads `Not recorded`.** Nothing carries that label today
+&mdash; every count in the notes has been resolved &mdash; but if one is ever
+genuinely absent, give it its own row or bucket so the totals still add up, and
+ask rather than imputing a value. The count is not always in parentheses beside
+the `SB`: on Harris's steal in the 4th of G2 it is the `1-2` on his own line
+just before it.
