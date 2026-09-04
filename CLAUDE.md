@@ -299,6 +299,17 @@ a recap generator writes.
   `that seventh`, `that inning`. Each bullet has to stand on its own, so name
   the thing or restate the number: "to go from two runs down to a 5&ndash;4
   lead", not "turned that lead into a deficit".
+- **Tense follows whether the thing is still running.** A finished series takes
+  the simple past &mdash; "Witt hit safely in all 3 games at ATL", not "has hit
+  safely", once the club has left Atlanta. Keep the present perfect for what is
+  genuinely still open: a season total that will grow ("KC has 4 errors on the
+  year"), an active streak, a rate through today. Re-check these on every
+  publish; a line that was right while a series was in progress goes stale the
+  moment it ends.
+- **A game is the event, not a container for it.** The home opener does not
+  "start in G4" &mdash; it IS G4. Write "G4 vs. MIN opens a 3-game set", not "a
+  3-game set starting in G4". The same goes for a debut, a series finale or a
+  milestone: name the game as the thing.
 - **Reach for the plain verb first.** `homered`, not "went deep"; `4 of the 13
   were home runs`, not "went over the wall"; `struck out 11`, not "went down on
   strikes". The sport's idiom is welcome only where it is genuinely the plainest
