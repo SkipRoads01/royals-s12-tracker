@@ -70,7 +70,10 @@ FP Hits tile only, not the pitching "FP Hits Allowed" tile.)
 
 Do NOT add instructional helper text anywhere on the site — e.g. "tap a tile for
 the rundown", "tap a card for games", or similar. Section subtitles should carry
-data only (e.g. "KC batters", "KC staff"), never usage hints.
+data only (e.g. "KC batters", "KC staff"), never usage hints and never an
+explanation of the number beside them. `Player of the Game` reads `3 awarded`,
+not `3 awarded &middot; one per win` &mdash; the count is the win total, so
+saying so is chatter.
 
 ## 4. Mobile-safe text (no raw non-ASCII typography)
 
