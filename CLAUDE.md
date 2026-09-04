@@ -318,9 +318,7 @@ a recap generator writes.
   and G2 at ATL, then singled twice in G3", not the opponent three times in one
   sentence. **"through three games" is too vague** for a season total &mdash;
   use `at ATL` / `vs. MIN` when the whole total came in one series, or `last 3
-  games` / `last 5 games` when it did not. (The
-  `story-lead` line that states the record, "2-1 through 3 games", is the
-  exception: it is the standings frame, not a stat locator.)
+  games` / `last 5 games` when it did not.
 - **Call them `KC pitchers`, not "the staff".** `Staff` stays as the totals-row
   label in `Opp Pitching` and in the `Staff rundown` hints, where it is a table
   heading rather than prose.
@@ -333,6 +331,14 @@ a recap generator writes.
 
 Section 8.3 still governs *which* stats may appear at all; this section governs
 how the ones that qualify are written.
+
+### 8.8.1 The `story-lead` band carries the record and nothing else
+
+`Inside the Numbers` opens with a tinted `.story-lead` band holding one thing:
+`<div class="story-big num">2&ndash;1</div>`, the season record. It used to
+carry a `.story-lead-txt` sentence beside it reading "2&ndash;1 through 3
+games", which said the number over again next to the number. Do not
+reintroduce it, or any other subtitle in that band.
 
 ### 8.9 When there is little to say, say little
 
