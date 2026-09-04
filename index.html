@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="build" content="20260904-044326">
+<meta name="build" content="20260904-123246">
 <title>Royals S12 Tracker</title>
 <style>
   :root {
@@ -79,9 +79,11 @@
   /* ---- Masthead ---- */
   header.mast {
     position: sticky; top: 0; z-index: 10;
-    background: color-mix(in srgb, var(--ground) 88%, transparent);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    /* Opaque, and no backdrop-filter. At 88% the content scrolling underneath
+       ghosted through the bar - readable text behind the title - and the tone
+       shifted as it passed, which reads as blanching. blur(10px) did not hide
+       it either: over a flat --ground it was worth a mean of 0.7/255. */
+    background: var(--ground);
     border-bottom: 1px solid var(--line);
     margin-bottom: 20px;
   }

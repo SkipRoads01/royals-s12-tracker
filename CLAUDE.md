@@ -744,6 +744,13 @@ narrower width, shrink the marks rather than dropping them.
 to sit under the title and was removed; do not reintroduce a `.mast-sub` line
 or any other tagline. The title stands alone beside the crest.
 
+**The sticky bar is opaque** &mdash; `background: var(--ground)`, with no
+`backdrop-filter`. At 88% opacity the content scrolling underneath ghosted
+through it, readable text and all, and the bar's tone shifted as it passed,
+which reads as a flicker on a Mac. The blur did not hide that: over a flat
+`--ground` it was worth a mean of 0.7/255. Do not reintroduce either the
+translucency or the filter.
+
 The stamp on the right is **`Through G{n}` over the publish date**, and both
 move with every publish. `Through G1` sat there for three games because it was
 never wired to anything &mdash; treat it as part of the regeneration, not
