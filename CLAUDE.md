@@ -309,8 +309,15 @@ a recap generator writes.
   for extra bases (41%)`, `4 of the 13 (31%) went over the wall`. Round to a
   whole number.
 - **Name the series or the game.** "in the finale" alone does not say which
-  finale; `in the ATL finale`, `in all 3 games at Atlanta`, `in G3` all locate
-  it. A line about one game or one series must say which.
+  finale; `in G3`, `in all 3 games at Atlanta`, `vs. ATL` all locate it. A line
+  about one game or one series must say which. **"through three games" is too
+  vague** for a season total &mdash; use `vs. ATL` when the whole total came in
+  one series, or `last 3 games` / `last 5 games` when it did not. (The
+  `story-lead` line that states the record, "2-1 through 3 games", is the
+  exception: it is the standings frame, not a stat locator.)
+- **Call them `KC pitchers`, not "the staff".** `Staff` stays as the totals-row
+  label in `Opp Pitching` and in the `Staff rundown` hints, where it is a table
+  heading rather than prose.
 - **Quantify a vague plural.** `Lowe made 2 errors`, never "made both errors"
   &mdash; the reader should not have to look up how many both is.
 - **Bold the whole stat expression, never a fragment of it.** `<b>4 of the 13
