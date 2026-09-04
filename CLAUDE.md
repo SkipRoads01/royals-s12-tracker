@@ -308,9 +308,12 @@ a recap generator writes.
 - **Give the percentage with any N-of-M stat.** `14 of KC's 34 hits have gone
   for extra bases (41%)`, `4 of the 13 (31%) went over the wall`. Round to a
   whole number.
-- **Name the series or the game.** "in the finale" alone does not say which
-  finale; `in G3`, `in all 3 games at Atlanta`, `vs. ATL` all locate it. A line
-  about one game or one series must say which. **"through three games" is too
+- **Name the game *and* the opponent: `in G3 vs. ATL`.** A bare `G3` says when
+  but not who, and a reader six weeks later has no idea. Use `vs. {OPP}` for
+  either venue &mdash; it reads as "against", not as a home/away marker, which
+  the schedule already carries. Once a line has named the opponent, later game
+  numbers in the same line stay bare: "led off G1 and G2 vs. ATL, then singled
+  twice in G3", not the opponent three times in one sentence. **"through three games" is too
   vague** for a season total &mdash; use `vs. ATL` when the whole total came in
   one series, or `last 3 games` / `last 5 games` when it did not. (The
   `story-lead` line that states the record, "2-1 through 3 games", is the
@@ -474,7 +477,8 @@ recaps. Through two games that means "four hits in eight at-bats", never
 "hitting .500".
 
 Section 8.8 binds these notes too: numerals for stat values, and **every note
-names the game it refers to** &mdash; `in the 9th of G3`, not "in the finale".
+names the game and the opponent** &mdash; `in the 9th of G3 vs. ATL`, not "in
+the finale" and not a bare `G3`.
 
 The note should say what a beat writer would say about that player right now
 &mdash; the shape of his season, not a restatement of the tiles above it. Name
