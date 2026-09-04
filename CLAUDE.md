@@ -283,7 +283,25 @@ a recap generator writes.
   year. Avoid inventing color that the recaps do not support; section 8.5 still
   governs the facts.
 
-### 8.8 When there is little to say, say little
+### 8.8 Numerals for stats, and locate every stat in a game or series
+
+- **Write a stat value as a numeral**, however small: `4 errors`, `9 starters`,
+  `struck out 11`, `7 home runs, 6 doubles and 1 triple`. Spelling one out is
+  right only where the number is editorial rather than a stat &mdash; "through
+  three games", "all 3 games at Atlanta" (3 is the stat, three is the frame).
+- **Give the percentage with any N-of-M stat.** `14 of KC's 34 hits have gone
+  for extra bases (41%)`, `4 of the 13 (31%) went over the wall`. Round to a
+  whole number.
+- **Name the series or the game.** "in the finale" alone does not say which
+  finale; `in the ATL finale`, `in all 3 games at Atlanta`, `in G3` all locate
+  it. A line about one game or one series must say which.
+- **Quantify a vague plural.** `Lowe made 2 errors`, never "made both errors"
+  &mdash; the reader should not have to look up how many both is.
+
+Section 8.3 still governs *which* stats may appear at all; this section governs
+how the ones that qualify are written.
+
+### 8.9 When there is little to say, say little
 
 The sections are sized to the season, not to a template. `Inside the Numbers`
 aims for ~6 bullets by midseason but should carry only 3&ndash;4 after a game or
