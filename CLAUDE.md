@@ -425,3 +425,31 @@ nothing more.
 Markup: a hidden `<div class="pm-body" id="pm-{slug}">` per player, cloned into
 `#pmodal` on click; `{slug}` is the full name lowercased with non-alphanumerics
 stripped. Closing works on the backdrop, the X, and Escape.
+
+## 12. Schedule roster notes
+
+A game in the `Schedule` panel may carry **pre-game roster notes** &mdash;
+lineup and position changes made before first pitch. They are not part of every
+game's notes, so most rows never have them.
+
+A game **with** notes becomes a dropdown; a game without one stays a plain
+`div.sgame` row. Never emit an empty dropdown.
+
+```html
+<details class="sgamed next"><summary class="sgame"><span class="g">G3</span>
+  <span class="mu"><span class="loc">@</span> <span class="opp">ATL</span></span>
+  <div class="out"><span class="nextchip">Next</span></div>
+  <span class="chev">&rsaquo;</span></summary>
+  <div class="rnotes"><div class="rn-k">Roster Notes</div>
+    <p>Garcia has been moved to CF, with Pasquantino taking 3B and Isbel sitting.</p>
+  </div></details>
+```
+
+- The `next` and `upcoming` modifiers move from the row to the `details`, which
+  now carries the border, background and gold ring. The summary keeps the same
+  grid with a fourth column for the chevron, so a row with notes and a row
+  without line up exactly.
+- **Check the notes against the box score before attaching them to a played
+  game.** Notes are written before a game and the lineup can change; if they
+  name a player sitting who then took four plate appearances, they belong to the
+  next game, not that one. This is how the G2/G3 notes were sorted out.
