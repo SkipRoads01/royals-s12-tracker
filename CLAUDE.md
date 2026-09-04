@@ -356,10 +356,18 @@ about how a season is going, and theirs is not being tracked here.
 
 Each card carries three things:
 
-1. **A photo slot**, 74px square. Until real player images are supplied it
-   holds the KC mark at half opacity; when one exists, swap in
-   `<img src="data:image/jpeg;base64,...">`, which fills the slot via
-   `object-fit: cover`. Images must be embedded, never hot-linked.
+1. **A photo**, in a 74px square slot. 22 of the 26 carry one, embedded as a
+   base64 JPEG (148px square, quality 80, ~6KB each) and cropped to fill via
+   `object-fit: cover`. Images are always embedded, never hot-linked. A player
+   with no free photo keeps the KC mark at half opacity rather than a broken
+   image or a blank box.
+
+   Photos come from Wikimedia Commons via the Wikipedia REST summary API, and
+   the footer credits them. Two cautions learned the hard way: **disambiguate
+   the title** &mdash; a plain `Carlos Santana` lookup returns the guitarist, so
+   query `Carlos Santana (baseball)` &mdash; and **look at what came back**
+   before publishing it. Crop square from the top of a portrait (the head sits
+   in the upper third), centered on a landscape.
 2. **A season stat line** &mdash; nine tiles for hitters
    (`G AB R H HR RBI SB AVG OPS`), ten for pitchers
    (`G W-L IP H R ER BB K ERA WHIP`). A player who has not appeared shows `0`
