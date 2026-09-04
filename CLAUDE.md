@@ -884,3 +884,42 @@ genuinely absent, give it its own row or bucket so the totals still add up, and
 ask rather than imputing a value. The count is not always in parentheses beside
 the `SB`: on Harris's steal in the 4th of G2 it is the `1-2` on his own line
 just before it.
+
+## 20. Offline on a phone
+
+The site is a service-worker-backed offline shell. Four files at the repo root
+carry it:
+
+| File | Holds |
+|---|---|
+| `sw.js` | the worker |
+| `manifest.webmanifest` | name, colours, icons, `display: standalone` |
+| `icon-192.png`, `icon-512.png` | the crest on a `--ground` square, 12% safe-area padding, `purpose: "any maskable"` |
+
+`index.html` links the manifest and an `apple-touch-icon` in its `<head>` and
+registers `sw.js` on `load`, after the version check so it never delays it.
+Registration is guarded on `https:` or localhost, so opening the file over
+`file://` simply skips it.
+
+**The worker is network-first for the page and never touches `version.txt`.**
+That is what keeps section 9's update mechanism working: online, a navigation
+always goes to the network, so the phone gets the current build and the cache is
+refreshed behind it; offline, the cached page is served instead. `version.txt`
+is explicitly excluded from interception so that offline it *fails*, which the
+page's own `catch` ignores. If the worker ever cached it, a stale build id could
+pin the page to a `?v=` reload loop.
+
+The navigation response is stored under the bare path (`./`), not under the
+request URL, so a `?v={build}` address still resolves offline.
+
+Bump `CACHE` in `sw.js` when the worker's own logic changes; the page inside it
+is refreshed by the network-first rule and needs no version bump.
+
+**This does not make the page a download.** The file is fully self-contained
+&mdash; no `<link>`, no `<script src>`, every image a data URI &mdash; so saving
+`index.html` from a browser and opening it from local storage also works, and is
+the fallback if a phone ever clears the worker. That copy is a snapshot and does
+not update.
+
+**Averages round half up.** `.3125` is `.313`. Python's `round()` is banker's
+rounding and returns `.312`; use `int(x*1000 + 0.5)` or equivalent.
