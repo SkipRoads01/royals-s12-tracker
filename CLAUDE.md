@@ -693,8 +693,19 @@ publish and disappears once game 162 is in the book.
 `Batting Splits` carries **AVG vs RHP** and **AVG vs LHP** tiles. Split KC's
 at-bats by the handedness of the pitcher on the mound, which the `Opp Pitching`
 table already records &mdash; lefties are marked `(L)`, everyone else is a
-righty (section 10). The tile's `st-sub` reads `N for M` and the back lists each
-arm faced with KC's line against him, hits first.
+righty (section 10). The tile's `st-sub` reads `N for M`.
+
+**The arms-faced list is its own page, not a flip card.** By season's end KC
+will have faced well over a hundred pitchers, far too many for a card back. The
+two tiles are `<button class="split-tile st-link" data-goto="p-arms">` and open
+the `Arms Faced` panel, which holds one table per handedness &mdash; `Pitcher`,
+`Club`, `H&ndash;AB`, `AVG`, sorted by at-bats, with a `Total` row that must
+agree with the tile &mdash; and a `&lsaquo; Back to Splits` link. `p-arms` has
+no tab of its own.
+
+Navigation to a panel from outside the tab bar goes through `data-goto`: a
+delegated click handler calls the same `activate(id)` the tabs use, so any
+element can open any panel.
 
 The `Challenges` table names **who challenged on the Royals side**, as a `.sub`
 line under the record: `Perez 4`, `Santana 2, Lowe 1`. Opponents stay anonymous
