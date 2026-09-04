@@ -509,6 +509,17 @@ Each card carries three things:
    headshot is his current one, and this roster is full of players acquired from
    elsewhere.
 
+The meta line under the name is
+`POS &middot; AGE &middot; OVR / POT &middot; SALARY / TERM` &mdash;
+`SS &middot; 25 &middot; 98 OVR / A POT &middot; $26.3M&nbsp;/&nbsp;11&nbsp;yrs`.
+**The salary always carries the contract length**, taken from the denominator
+of the Roster table's `Contract` column (`1/11` is year 1 of an 11-year deal),
+so it agrees with the `(SALARY/YEARS)` on the same player's card in `Starters`
+or `Relievers`. Singular for a one-year deal (`1 yr`). The three spaces in the
+salary group are `&nbsp;` so a phone wraps before the `$` rather than splitting
+the figure. Minor leaguers have no salary line at all &mdash; theirs reads
+`POS &middot; AFFILIATE &middot; LEVEL`.
+
 2. **A season stat line** &mdash; nine tiles for hitters
    (`G AB R H HR RBI SB AVG OPS`), ten for pitchers
    (`G W-L IP H R ER BB K ERA WHIP`). A player who has not appeared shows `0`
