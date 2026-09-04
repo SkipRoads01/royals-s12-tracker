@@ -541,11 +541,15 @@ tiles share one path.
 
 ## 14. Opponent logo in game rows
 
-Game-log rows carry the opponent's mark between the location and the
-abbreviation: `<span class="loc">@</span> <span class="tlogo lg-ATL"></span>
-<span class="opp">ATL</span>`. The `.lg-*` classes already exist for all 30
-clubs, so this costs nothing. `.matchup .mteam` is a flex row and the mark is
-sized down to 17px there.
+Game-log rows carry the opponent's mark **to the right of the abbreviation**:
+`<span class="loc">@</span> <span class="opp">ATL</span> <span class="tlogo
+lg-ATL"></span>`. The `.lg-*` classes already exist for all 30 clubs, so this
+costs nothing.
+
+It is a **51px** mark in the game log (`.matchup .mteam .tlogo`) &mdash; large
+enough to read as the club's identity rather than a bullet point. The compact
+`.gref` rows inside a stat tile's modal keep a 17px version, since those rows
+are meant to be scannable at a glance.
 
 ## 15. Next Game tile
 
