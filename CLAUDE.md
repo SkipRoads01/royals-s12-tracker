@@ -310,6 +310,10 @@ a recap generator writes.
   "start in G4" &mdash; it IS G4. Write "G4 vs. MIN opens a 3-game set", not "a
   3-game set starting in G4". The same goes for a debut, a series finale or a
   milestone: name the game as the thing.
+- **A trailing clause has to carry a fact.** "Bell led it off by reaching on an
+  error and took second on a wild pitch, all before a hit" ends on a qualifier
+  that tells the reader nothing. Cut it, or replace it with the figure that was
+  actually the point &mdash; here, that the first 6 MIN batters reached.
 - **Reach for the plain verb first.** `homered`, not "went deep"; `4 of the 13
   were home runs`, not "went over the wall"; `struck out 11`, not "went down on
   strikes". The sport's idiom is welcome only where it is genuinely the plainest
