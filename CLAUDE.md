@@ -449,8 +449,8 @@ Both panels list the whole staff, not only the arms that have appeared. A
 pitcher who has not yet thrown carries his meta line and a single `Has not
 pitched` row where his game log would go; his season stats are `0` for the
 counting columns and `N/A` for ERA, WHIP, K/9 and BAA, which have no value at
-0 IP. `Starters` carries a `N of 5 used` subtitle; **`Relievers` carries no
-subtitle at all** &mdash; do not reintroduce `8 of 8 used`.
+0 IP. **Neither panel carries a subtitle** &mdash; do not reintroduce
+`5 of 5 used` or `8 of 8 used`. The cards themselves say who has pitched.
 
 Each reliever's `starter-tot` chips read `G`, then `IP`, then any `SV` or
 `HLD`, then `K` &mdash; `2 G`, `5.1 IP`, `1 HLD`, `7 K`. Starters keep
