@@ -730,15 +730,16 @@ the `Arms Faced` panel, which holds one table per handedness &mdash; `Pitcher`,
 `Club`, `H&ndash;AB`, `AVG`, sorted by at-bats, with a `Total` row that must
 agree with the tile &mdash; and a `&lsaquo; Back to Splits` link. `p-arms` has
 no tab of its own. **Its `Total` row is `position: sticky; bottom: 0`** so it
-stays in view while a long list scrolls past it.
+stays in view while a long list scrolls past it; the `Staff` rows in
+`Opp Pitching` pin the same way.
 
 Navigation to a panel from outside the tab bar goes through `data-goto`: a
 delegated click handler calls the same `activate(id)` the tabs use, so any
 element can open any panel.
 
 The `Challenges` table names **who challenged on the Royals side**, as a `.sub`
-disclosure under the record &mdash; `<details class="chd"><summary>Who
-challenged</summary>` &mdash; with one name per line, so the cell does not grow
+disclosure under the record &mdash; `<details class="chd"><summary>List</summary>`
+&mdash; with one name per line, so the cell does not grow
 as the season does. Opponents stay anonymous
 by design.
 
@@ -863,7 +864,7 @@ Sections, in order:
 | The Middle Shift | tiles, then a by-batter table for KC and for the batters KC has shifted on |
 | Bases Loaded | tiles, then a by-batter table for each club |
 | Stolen Bases, and the Count | a `Count / KC / Opponents` table, then a by-runner table for each club |
-| Tough Plays | a count tile; the batters go in the disclosure, never in the tile |
+| Tough Plays | a count tile holding only the number; batter, fielder, game and play go in the disclosure |
 | Odds and Ends | a `.story-list` of one-line facts |
 
 **Every section aggregates first.** One row per event does not survive a
