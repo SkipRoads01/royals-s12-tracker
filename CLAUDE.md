@@ -456,8 +456,13 @@ Each reliever's `starter-tot` chips read `G`, then `IP`, then any `SV` or
 `HLD`, then `K` &mdash; `2 G`, `5.1 IP`, `1 HLD`, `7 K`. Starters keep
 `Team W-L`, `K`, `HRA` instead.
 
-Cards for arms that have pitched come first, in order of first appearance;
-those that have not follow, in roster order.
+**`Relievers` is sorted by innings pitched, most to least.** Ties keep first
+appearance order, and an arm that has not pitched has 0.0 IP so it falls to the
+bottom on its own; order those among themselves by the roster. Re-sort on every
+publish &mdash; a reliever who works 2 innings jumps the card above him.
+
+`Starters` is not sorted this way: its cards stay in rotation order, with arms
+that have not pitched last.
 
 ### 10.2 A game line carries two results
 
