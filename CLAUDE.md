@@ -384,6 +384,9 @@ subject matter, so it can run its usual ~6 rows from game 1.
 `version.txt` at the repo root, and `<meta name="build" content="...">` in the
 `<head>` of `index.html`. Use a UTC stamp, `YYYYMMDD-HHMMSS`.
 
+The `<footer>` carries the record and the game number too &mdash; `3-2 through
+Game 5` &mdash; and goes stale just as quietly as the masthead stamp. Move both.
+
 This is what stops a phone from sitting on a stale copy. GitHub Pages serves
 HTML with `cache-control: max-age=600` and gives no way to change that, so the
 page checks for itself: a small script at the end of `index.html` fetches
@@ -446,7 +449,12 @@ Both panels list the whole staff, not only the arms that have appeared. A
 pitcher who has not yet thrown carries his meta line and a single `Has not
 pitched` row where his game log would go; his season stats are `0` for the
 counting columns and `N/A` for ERA, WHIP, K/9 and BAA, which have no value at
-0 IP. The panel subtitle counts both: `2 of 5 used`, `6 of 8 used`.
+0 IP. `Starters` carries a `N of 5 used` subtitle; **`Relievers` carries no
+subtitle at all** &mdash; do not reintroduce `8 of 8 used`.
+
+Each reliever's `starter-tot` chips read `G`, then `IP`, then any `SV` or
+`HLD`, then `K` &mdash; `2 G`, `5.1 IP`, `1 HLD`, `7 K`. Starters keep
+`Team W-L`, `K`, `HRA` instead.
 
 Cards for arms that have pitched come first, in order of first appearance;
 those that have not follow, in roster order.
@@ -716,14 +724,17 @@ two tiles are `<button class="split-tile st-link" data-goto="p-arms">` and open
 the `Arms Faced` panel, which holds one table per handedness &mdash; `Pitcher`,
 `Club`, `H&ndash;AB`, `AVG`, sorted by at-bats, with a `Total` row that must
 agree with the tile &mdash; and a `&lsaquo; Back to Splits` link. `p-arms` has
-no tab of its own.
+no tab of its own. **Its `Total` row is `position: sticky; bottom: 0`** so it
+stays in view while a long list scrolls past it.
 
 Navigation to a panel from outside the tab bar goes through `data-goto`: a
 delegated click handler calls the same `activate(id)` the tabs use, so any
 element can open any panel.
 
 The `Challenges` table names **who challenged on the Royals side**, as a `.sub`
-line under the record: `Perez 4`, `Santana 2, Lowe 1`. Opponents stay anonymous
+disclosure under the record &mdash; `<details class="chd"><summary>Who
+challenged</summary>` &mdash; with one name per line, so the cell does not grow
+as the season does. Opponents stay anonymous
 by design.
 
 A batter challenge is attributed to the batter named in the recap. A catcher
@@ -847,6 +858,7 @@ Sections, in order:
 | The Middle Shift | tiles, then a by-batter table for KC and for the batters KC has shifted on |
 | Bases Loaded | tiles, then a by-batter table for each club |
 | Stolen Bases, and the Count | a `Count / KC / Opponents` table, then a by-runner table for each club |
+| Tough Plays | a count tile; the batters go in the disclosure, never in the tile |
 | Odds and Ends | a `.story-list` of one-line facts |
 
 **Every section aggregates first.** One row per event does not survive a
