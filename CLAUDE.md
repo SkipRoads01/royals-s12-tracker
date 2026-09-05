@@ -664,9 +664,12 @@ it). It used to say `Roster Notes`; do not go back to that.
 
 ## 13. Clickable strip tiles
 
-`Sweeps`, `Shutouts`, `Comebacks`, `Most Runs`, `Most Runs Allowed` and `BLL`
-each refer to specific games, so each opens the game or games behind it in the
-same `#pmodal` used by player cards.
+`Sweeps`, `Shutouts`, `Comebacks`, `Errors`, `Most Runs`, `Most Runs Allowed`
+and `BLL` each refer to specific games, so each opens the game or games behind
+it in the same `#pmodal` used by player cards. `Errors` lists every game KC made
+one in, newest first, and each note names the fielders and what the errors cost
+&mdash; the position number in the recap (`E5`, `E6`) is read against that
+game's alignment, exactly as the tough plays are (section 19).
 
 - A tile with **at least one game behind it** is a `<button class="stat"
   data-p="stat-{slug}">` and carries a `&rsaquo;` on its label line. A tile
@@ -729,9 +732,8 @@ two tiles are `<button class="split-tile st-link" data-goto="p-arms">` and open
 the `Arms Faced` panel, which holds one table per handedness &mdash; `Pitcher`,
 `Club`, `H&ndash;AB`, `AVG`, sorted by at-bats, with a `Total` row that must
 agree with the tile &mdash; and a `&lsaquo; Back to Splits` link. `p-arms` has
-no tab of its own. **Its `Total` row is `position: sticky; bottom: 0`** so it
-stays in view while a long list scrolls past it; the `Staff` rows in
-`Opp Pitching` pin the same way.
+no tab of its own. Its `Total` row is locked to the bottom like every other
+totals row (section 21).
 
 Navigation to a panel from outside the tab bar goes through `data-goto`: a
 delegated click handler calls the same `activate(id)` the tabs use, so any
@@ -938,6 +940,22 @@ is refreshed by the network-first rule and needs no version bump.
 `index.html` from a browser and opening it from local storage also works, and is
 the fallback if a phone ever clears the worker. That copy is a snapshot and does
 not update.
+
+## 21. Totals rows are locked
+
+Every table that carries a totals row &mdash; `Total`, `Staff`, or any other
+summary line &mdash; puts it in a `<tfoot>` as `<tr class="tot">`, never as the
+last row of the `<tbody>`. Two things depend on that:
+
+- **Sorting.** Every column header in a `.tbl-wrap` table is sortable, and the
+  sort reorders `tbody.rows`. A totals row sitting in the `tbody` is sorted
+  along with the players and lands in the middle of the table, which is how the
+  MIN `Staff` row in `Opp Pitching` came to float while the ATL one, already in
+  a `tfoot`, stayed put. The sort also skips `tr.tot` outright and re-appends
+  any it finds, so a row in the wrong place still cannot move.
+- **Pinning.** One rule, `.tbl-wrap tfoot tr.tot td`, gives every totals row
+  `position: sticky; bottom: 0`, the `--surface-2` ground, a top border and
+  weight 800. It is the whole treatment &mdash; do not add a per-table variant.
 
 **Averages round half up.** `.3125` is `.313`. Python's `round()` is banker's
 rounding and returns `.312`; use `int(x*1000 + 0.5)` or equivalent.
