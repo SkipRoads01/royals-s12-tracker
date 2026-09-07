@@ -865,6 +865,7 @@ Sections, in order:
 | Hits by Count | a `Two-Strike Hits` and a `First-Pitch Hits` tile, then every KC hit by the count it came on |
 | The Middle Shift | tiles, then a by-batter table for KC and for the batters KC has shifted on |
 | Bases Loaded | tiles, then a by-batter table for each club |
+| Hit By Pitch | tiles, then a by-batter table for each club; the disclosure names the pitcher and the game |
 | Stolen Bases, and the Count | a `Count / KC / Opponents` table, then a by-runner table for each club |
 | Tough Plays | a count tile holding only the number; batter, fielder, game and play go in the disclosure |
 | Odds and Ends | a `.story-list` of one-line facts |
