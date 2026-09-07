@@ -952,6 +952,18 @@ and the team tables have to keep totalling. He keeps his `Starters` or
 `Relievers` card for the same reason. Only his `League` cell and his card's
 note change.
 
+**`Team Batting` and `Team Pitching` list who has appeared, not who is on the
+roster.** A player missing from them has simply not been in a game yet, which
+is why a promoted arm shows up in `Relievers` (section 10.1 lists the whole
+staff) but not in `Team Pitching` until he throws a pitch. Do not add a
+0-line row to either table to fill the gap.
+
+A promotion or demotion inside the minors changes three things and nothing
+else: the `League` cell in the `Roster` table, the affiliate logo class on the
+player's card (`.mlogo.lv-aaa` / `lv-aa` / `lv-a`), and the affiliate and
+level in that card's `POS &middot; AFFILIATE &middot; LEVEL` meta line
+(section 11).
+
 Section 8 governs the prose in both sections: the notes are reported as given,
 never extrapolated from.
 
