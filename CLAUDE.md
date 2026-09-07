@@ -913,7 +913,8 @@ holds two sections, in this order:
 
 | Section | Holds |
 |---|---|
-| Transactions | roster and transaction notes supplied with the game notes &mdash; signings, call-ups, options, injuries, trades |
+| Transactions | completed roster moves &mdash; signings, call-ups, options, demotions, injuries, trades that went through |
+| Proposed Trades | offers that have not been accepted, newest first |
 | Line-up Changes | every pre-game line-up note on the site, newest game first |
 
 **`Line-up Changes` is a mirror, not a second source.** The same note is attached
@@ -938,9 +939,10 @@ A transaction row's `news-g` column names where the player is going &mdash;
 `news-k` kicker the kind of move (`Promoted`, `Demoted`, `Signed`,
 `Proposed trade`).
 
-**A proposed trade moves nobody.** Post it, mark it `Proposed` in the kicker,
-and leave the `Roster` table, the player cards and the `Starters` and
-`Relievers` panels exactly as they were. Where the notes give the budget
+**A proposed trade moves nobody.** It lives in `Proposed Trades`, never in
+`Transactions`, and leaves the `Roster` table, the player cards and the
+`Starters` and `Relievers` panels exactly as they were. A trade that goes
+through moves to `Transactions` and only then changes them. Where the notes give the budget
 effect, it goes in the same row as one bolded figure &mdash; `<b>37.34 to
 34.13 (-3.21)</b>` &mdash; in the units the notes use, stated as conditional
 on the deal being accepted. It changes no other number on the site while the
@@ -953,6 +955,12 @@ as the two sides of the deal. They are **51px** `.tlogo` spans using the same
 `.lg-{ABBR}` classes the game log does, at the same size a game row uses
 (section 14). Promotions and demotions inside the organization carry no mark
 &mdash; the `news-g` column already names the level.
+
+**A trade row has no `news-g` column**, because the two marks already name both
+clubs, and its `news-k` kicker is the other club's full name rather than a
+status word: the section heading says the trade is proposed, so repeating it on
+every row is the chatter section 3 forbids. The `Proposed Trades` meta counts
+open offers (`2 open`), and `Transactions` counts only completed moves.
 
 **The budget figure is coloured by its direction.** The whole expression is one
 bolded figure per section 8.8, and it takes `.news-bud.down` (red,
