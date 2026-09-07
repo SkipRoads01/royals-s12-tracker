@@ -733,7 +733,7 @@ the `Arms Faced` panel, which holds one table per handedness &mdash; `Pitcher`,
 `Club`, `H&ndash;AB`, `AVG`, sorted by at-bats, with a `Total` row that must
 agree with the tile &mdash; and a `&lsaquo; Back to Splits` link. `p-arms` has
 no tab of its own. Its `Total` row is locked to the bottom like every other
-totals row (section 21).
+totals row (section 22).
 
 Navigation to a panel from outside the tab bar goes through `data-goto`: a
 delegated click handler calls the same `activate(id)` the tabs use, so any
@@ -906,7 +906,37 @@ ask rather than imputing a value. The count is not always in parentheses beside
 the `SB`: on Harris's steal in the 4th of G2 it is the `1-2` on his own line
 just before it.
 
-## 20. Offline on a phone
+## 20. News page
+
+`News` is its own tab (`p-news`), sitting between `Schedule` and `Starters`. It
+holds two sections, in this order:
+
+| Section | Holds |
+|---|---|
+| Transactions | roster and transaction notes supplied with the game notes &mdash; signings, call-ups, options, injuries, trades |
+| Line-up Changes | every pre-game line-up note on the site, newest game first |
+
+**`Line-up Changes` is a mirror, not a second source.** The same note is attached
+to its game's row in the `Schedule` panel (section 12) and repeated here, so a
+note is written once and appears in both places with identical wording. Add a
+game to one and it goes in the other; never let the two drift.
+
+Each row is `<div class="news"><span class="news-g">G6</span><div><div
+class="news-k">vs. MIN</div><div class="news-txt">&hellip;</div></div></div>`
+inside a `.news-card`. The `news-g` column carries the game number and the
+`news-k` kicker the opponent with its venue preposition (`vs. MIN`, `at ATL`),
+so a row says when and who without reading the sentence. Player names are
+bolded, as they are in `Recent Headlines`.
+
+**A section with nothing in it still renders**, as one row reading `None yet`
+with no game label, and its `sec-head` meta reads `none this season`. Do not
+drop the section, and do not invent a transaction to fill it. When transactions
+do arrive they are listed newest first and the meta becomes a count.
+
+Section 8 governs the prose in both sections: the notes are reported as given,
+never extrapolated from.
+
+## 21. Offline on a phone
 
 The site is a service-worker-backed offline shell. Four files at the repo root
 carry it:
@@ -942,7 +972,7 @@ is refreshed by the network-first rule and needs no version bump.
 the fallback if a phone ever clears the worker. That copy is a snapshot and does
 not update.
 
-## 21. Totals rows are locked
+## 22. Totals rows are locked
 
 Every table that carries a totals row &mdash; `Total`, `Staff`, or any other
 summary line &mdash; puts it in a `<tfoot>` as `<tr class="tot">`, never as the
