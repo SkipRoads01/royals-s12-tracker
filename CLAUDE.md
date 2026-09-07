@@ -669,7 +669,11 @@ and `BLL` each refer to specific games, so each opens the game or games behind
 it in the same `#pmodal` used by player cards. `Errors` lists every game KC made
 one in, newest first, and each note names the fielders and what the errors cost
 &mdash; the position number in the recap (`E5`, `E6`) is read against that
-game's alignment, exactly as the tough plays are (section 19).
+game's alignment, exactly as the tough plays are (section 19). The `Errors`
+modal opens with a `By fielder` table (`Fielder`, `E`, locked `Total` per
+section 22) before the `By game` list, so the season's errors are attributable
+without reading every note. Each name in it is a `pname` button like any other
+(section 11.2).
 
 - A tile with **at least one game behind it** is a `<button class="stat"
   data-p="stat-{slug}">` and carries a `&rsaquo;` on its label line. A tile
@@ -934,10 +938,12 @@ with no game label, and its `sec-head` meta reads `none this season`. Do not
 drop the section, and do not invent a transaction to fill it. When transactions
 do arrive they are listed newest first and the meta becomes a count.
 
-A transaction row's `news-g` column names where the player is going &mdash;
-`MLB`, `AAA`, or the other club's abbreviation on a trade &mdash; and the
-`news-k` kicker the kind of move (`Promoted`, `Demoted`, `Signed`,
-`Proposed trade`).
+A transaction row's `news-g` column names where the player is going and carries
+that destination's mark above the letters: KC's `.tlogo.lg-KC` for `MLB`, and
+the affiliate's `.mlogo.lv-aaa` / `lv-aa` / `lv-a` inside a `.news-mark` box for
+`AAA`, `AA` and `A` (the `.mlogo` classes are sized by their container, so they
+need one). The `news-k` kicker names the kind of move (`Promoted`, `Demoted`,
+`Signed`).
 
 **A proposed trade moves nobody.** It lives in `Proposed Trades`, never in
 `Transactions`, and leaves the `Roster` table, the player cards and the
@@ -962,10 +968,13 @@ status word: the section heading says the trade is proposed, so repeating it on
 every row is the chatter section 3 forbids. The `Proposed Trades` meta counts
 open offers (`2 open`), and `Transactions` counts only completed moves.
 
-**The budget figure is coloured by its direction.** The whole expression is one
-bolded figure per section 8.8, and it takes `.news-bud.down` (red,
-`var(--loss)`) when the change is negative and `.news-bud.up` (green,
-`var(--win)`) when it is positive. Colour the figure, never a fragment of it. Only a completed move changes them,
+**Only the result carries the colour.** The whole expression stays one bolded
+figure per section 8.8 &mdash; `<b>37.34 to 34.13 <span
+class="news-bud down">(-3.21)</span></b>` &mdash; but the tint sits on the
+change alone, `.news-bud.down` (red, `var(--loss)`) when it is negative and
+`.news-bud.up` (green, `var(--win)`) when positive. The two balances stay in
+the ordinary ink; colouring them too makes the row read as three verdicts
+instead of one. Only a completed move changes them,
 and then it changes all of them together: the `League` cell in the `Roster`
 table, the card's format (section 11), and the pitcher's presence in
 `Starters` or `Relievers` (section 10.1). The meta counts completed moves and
