@@ -947,10 +947,17 @@ on the deal being accepted. It changes no other number on the site while the
 trade is only proposed.
 
 **A trade row carries both clubs' marks**, in a `.news-teams` strip between the
-kicker and the sentence: KC's first, then the other club's, as 34px `.tlogo`
-spans using the same `.lg-{ABBR}` classes the game log does (section 14). Two
-marks, because a trade has two sides. Promotions and demotions inside the
-organization carry no mark &mdash; the `news-g` column already names the level. Only a completed move changes them,
+kicker and the sentence: KC's on the left and the other club's on the right,
+pushed to opposite ends by `justify-content: space-between` so the strip reads
+as the two sides of the deal. They are **51px** `.tlogo` spans using the same
+`.lg-{ABBR}` classes the game log does, at the same size a game row uses
+(section 14). Promotions and demotions inside the organization carry no mark
+&mdash; the `news-g` column already names the level.
+
+**The budget figure is coloured by its direction.** The whole expression is one
+bolded figure per section 8.8, and it takes `.news-bud.down` (red,
+`var(--loss)`) when the change is negative and `.news-bud.up` (green,
+`var(--win)`) when it is positive. Colour the figure, never a fragment of it. Only a completed move changes them,
 and then it changes all of them together: the `League` cell in the `Roster`
 table, the card's format (section 11), and the pitcher's presence in
 `Starters` or `Relievers` (section 10.1). The meta counts completed moves and
