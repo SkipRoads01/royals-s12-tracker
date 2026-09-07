@@ -944,7 +944,13 @@ and leave the `Roster` table, the player cards and the `Starters` and
 effect, it goes in the same row as one bolded figure &mdash; `<b>37.34 to
 34.13 (-3.21)</b>` &mdash; in the units the notes use, stated as conditional
 on the deal being accepted. It changes no other number on the site while the
-trade is only proposed. Only a completed move changes them,
+trade is only proposed.
+
+**A trade row carries both clubs' marks**, in a `.news-teams` strip between the
+kicker and the sentence: KC's first, then the other club's, as 34px `.tlogo`
+spans using the same `.lg-{ABBR}` classes the game log does (section 14). Two
+marks, because a trade has two sides. Promotions and demotions inside the
+organization carry no mark &mdash; the `news-g` column already names the level. Only a completed move changes them,
 and then it changes all of them together: the `League` cell in the `Roster`
 table, the card's format (section 11), and the pitcher's presence in
 `Starters` or `Relievers` (section 10.1). The meta counts completed moves and
