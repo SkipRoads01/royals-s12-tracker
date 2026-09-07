@@ -933,6 +933,25 @@ with no game label, and its `sec-head` meta reads `none this season`. Do not
 drop the section, and do not invent a transaction to fill it. When transactions
 do arrive they are listed newest first and the meta becomes a count.
 
+A transaction row's `news-g` column names where the player is going &mdash;
+`MLB`, `AAA`, or the other club's abbreviation on a trade &mdash; and the
+`news-k` kicker the kind of move (`Promoted`, `Demoted`, `Signed`,
+`Proposed trade`).
+
+**A proposed trade moves nobody.** Post it, mark it `Proposed` in the kicker,
+and leave the `Roster` table, the player cards and the `Starters` and
+`Relievers` panels exactly as they were. Only a completed move changes them,
+and then it changes all of them together: the `League` cell in the `Roster`
+table, the card's format (section 11), and the pitcher's presence in
+`Starters` or `Relievers` (section 10.1). The meta counts completed moves and
+proposals separately.
+
+**A demoted player who has already appeared keeps his major-league card and
+his line in `Team Batting` or `Team Pitching`.** What he did for KC happened,
+and the team tables have to keep totalling. He keeps his `Starters` or
+`Relievers` card for the same reason. Only his `League` cell and his card's
+note change.
+
 Section 8 governs the prose in both sections: the notes are reported as given,
 never extrapolated from.
 
