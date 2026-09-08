@@ -871,6 +871,7 @@ Sections, in order:
 | Bases Loaded | tiles, then a by-batter table for each club |
 | Hit By Pitch | tiles, then a by-batter table for each club; the disclosure names the pitcher and the game |
 | Stolen Bases, and the Count | a `Count / KC / Opponents` table, then a by-runner table for each club |
+| Runners Left On Base | a tile for each club, then a by-game `Game / KC / Opponents` table |
 | Tough Plays | a count tile holding only the number; batter, fielder, game and play go in the disclosure |
 | Odds and Ends | a `.story-list` of one-line facts |
 
@@ -882,6 +883,16 @@ raw event list stays available underneath in a
 `<details class="errd"><summary>Every plate appearance</summary>` (or `Every
 steal`), which is collapsed by default and is the only place a name repeats.
 Add a new section the same way.
+
+**LOB is counted from the half-innings, not from a box score.** At the end of
+every half-inning, count the runners still on base and sum them. Cross-check
+each half against `runners who reached &minus; runs scored &minus; runners put
+out on the bases` &mdash; a caught stealing, a pickoff, a runner forced on a
+double play or a fielder's choice, a man thrown out stretching. A batter who
+reached on an error or a fielder's choice reached base; a batter retired at
+first on a force play never did. The extra-innings automatic runner is on base
+like any other, so he counts when stranded, and a walk-off leaves the runners
+standing at that moment on base.
 
 **Read the notation, never guess at it.** The page interprets only markers whose
 meaning the notes establish: `HH` (hard hit), `MS` (middle shift, written out
