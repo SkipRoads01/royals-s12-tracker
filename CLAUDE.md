@@ -962,7 +962,15 @@ need one). The `news-k` kicker names the kind of move (`Promoted`, `Demoted`,
 **A proposed trade moves nobody.** It lives in `Proposed Trades`, never in
 `Transactions`, and leaves the `Roster` table, the player cards and the
 `Starters` and `Relievers` panels exactly as they were. A trade that goes
-through moves to `Transactions` and only then changes them. Where the notes give the budget
+through moves to `Transactions` and only then changes them.
+
+**A rejected offer stays where it is, marked.** It keeps its row in
+`Proposed Trades` with a `<span class="chip">Rejected</span>` on the kicker and
+`past` on the row, which mutes the text and fades the marks the way
+`.hl-fig.past` mutes a finished streak. Open offers come first and rejected
+ones last, and the section meta counts them apart (`2 open &middot; 1
+rejected`). Do not delete a rejected offer: a later offer for the same player
+only reads as a second try if the first is still on the page. Where the notes give the budget
 effect, it goes in the same row as one bolded figure &mdash; `<b>37.34 to
 34.13 (-3.21)</b>` &mdash; in the units the notes use, stated as conditional
 on the deal being accepted. It changes no other number on the site while the
