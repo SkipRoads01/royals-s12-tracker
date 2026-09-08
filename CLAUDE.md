@@ -857,21 +857,24 @@ derived by reading the recaps &mdash; section 8.5 governs it exactly as it
 governs the prose, and the `Odds and Ends` list is prose: section 8.8's bolding
 rule binds it, so `<b>11 of KC's 16 hard-hit balls (69%)</b>`, never
 `<b>11</b> of KC's 16 hard-hit balls`. Cross-check what can be cross-checked before publishing: the
-hits-by-count table must total the season hit count, its `First pitch` row must
-equal the `FP Hits` split, and the stolen-base rows must total the `SB` column
-of `Team Batting`.
+hits-by-count table's `KC` column must total the season hit count and its
+`First pitch` row equal the `FP Hits` split, its `Opp` column must total the
+hits allowed in `Team Pitching`, the stolen-base rows must total the `SB`
+column of `Team Batting`, and the `KC` double-play tile must equal the `GIDP`
+tile on the Overview strip.
 
 Sections, in order:
 
 | Section | Holds |
 |---|---|
 | Hard Contact | two tiles (KC and opponents, AVG on balls marked `HH`) and a by-batter table |
-| Hits by Count | a `Two-Strike Hits` and a `First-Pitch Hits` tile, then every KC hit by the count it came on |
+| Hits by Count | a `Two-Strike Hits` and a `First-Pitch Hits` tile, then a `Count / KC / Opp` table of every hit, both clubs, by the count it came on |
 | The Middle Shift | tiles, then a by-batter table for KC and for the batters KC has shifted on |
 | Bases Loaded | tiles, then a by-batter table for each club |
 | Hit By Pitch | tiles, then a by-batter table for each club; the disclosure names the pitcher and the game |
 | Stolen Bases, and the Count | a `Count / KC / Opponents` table, then a by-runner table for each club |
 | Runners Left On Base | a tile for each club, then a by-game `Game / KC / Opponents` table |
+| Grounded Into Double Plays | a tile for each club, then a by-batter table for each; the disclosure names the game and the play |
 | Tough Plays | a count tile holding only the number; batter, fielder, game and play go in the disclosure |
 | Odds and Ends | a `.story-list` of one-line facts |
 
