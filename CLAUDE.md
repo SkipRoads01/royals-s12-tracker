@@ -1129,9 +1129,12 @@ Two forms, chosen by the shape of the table:
 
 `td .tm` is the muted 10px tag; it is the only styling either form needs.
 
-**Opp Pitching is the exception**, and stays as it is. It runs one table per
-club under an `.opp-head` carrying that club's logo and full name, so a `Club`
-column would repeat one value down every row.
+**No table is exempt, `Opp Pitching` included.** Its three tables each sit under
+an `.opp-head` naming one club, so the column repeats a single value down the
+table &mdash; carry it anyway. The heading scrolls away, the tables sort, and a
+reader landing on a row mid-page should not have to scroll back up to learn who
+the pitcher throws for. The `Staff` totals row leaves the cell empty like any
+other totals row (section 22).
 
 Derive the club from the recaps like everything else (section 8.5): a batter
 belongs to the club that was batting in that half-inning, a pitcher to the club
