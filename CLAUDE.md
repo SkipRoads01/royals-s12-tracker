@@ -328,6 +328,10 @@ a recap generator writes.
   wording &mdash; the other way, singled home, on the year. Invented color the
   recaps do not support is worse than a flat sentence, and section 8.5 still
   governs the facts.
+- **A hit is not taken.** A batter *gets* a hit, or a hit *comes* on a count
+  &mdash; "26 of the opponents' 72 hits (36%) have come with 2 strikes". Never
+  "opponents have taken 26 of their hits with 2 strikes". A batter takes a
+  pitch, a base, or a walk; the verb does not stretch to the hit itself.
 
 ### 8.8 Numerals for stats, and locate every stat in a game or series
 
