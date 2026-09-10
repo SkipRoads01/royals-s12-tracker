@@ -506,6 +506,21 @@ read `0`, because zero is the true count. `INF` is not the same thing and stays
 as it is: a pitcher charged with earned runs without recording an out has a
 genuinely infinite ERA, which is a result rather than a blank.
 
+## 10.4 Team Batting and Team Pitching column sets
+
+`Team Batting` carries `Batter | AVG | HR | RBI | H | SB | SO | OPS`. `SO` is the
+batter's season strikeouts. It takes **no `lead-cell`** &mdash; that mark means
+best in column, and leading the club in strikeouts is not that.
+
+`Team Pitching` carries `Pitcher | POS | W-L | ERA | IP | K | SV | HLD`. `POS` is
+the club's own designation as it appears on the Roster page (`SP`, `RP`, `CP`),
+not how the arm has been used &mdash; Kolek and Bergert read `SP` while working
+out of the bullpen, which is what they are. Left-handers carry `(L)` after the
+name, the same convention as `Opp Pitching` (section 10): Strahm, Hentges,
+Cameron and Falter. Right-handed is unmarked.
+
+Both column sets are load-bearing. Do not drop or reorder them on a publish.
+
 ## 11. Roster page player cards
 
 On the `Roster` page every player's name is clickable and opens a card. What
