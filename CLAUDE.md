@@ -548,6 +548,16 @@ Each logo is defined **once**, as a base64 SVG background on a `.mlogo.lv-*`
 class, and every card references the class. Never inline the image per player
 &mdash; 64 copies of a 10KB logo would add most of a megabyte for nothing.
 
+**The base `.mlogo` rule takes no ancestor selector.** It is the rule that gives
+the span its box &mdash; `width: 100%; height: 100%; display: block`, plus the
+white ground and `background-size: 72%` &mdash; and the span is sized by
+whatever holds it: 74px inside a `.pm-photo` on a Roster card, 34px inside a
+`.news-mark` on the `News` page (section 20). Writing it as `.pm-photo .mlogo`
+compiles fine and silently drops the other one: the `.lv-*` class still supplies
+the image, but with no width, height or `display` the span collapses and the
+News row paints an empty white box. That is exactly how the affiliate marks went
+missing from a build. The `.lv-*` classes carry the image and nothing else.
+
 Each card carries three things:
 
 1. **A photo**, in a 74px square slot. All 26 carry one, embedded as a base64
@@ -1096,3 +1106,35 @@ last row of the `<tbody>`. Two things depend on that:
 
 **Averages round half up.** `.3125` is `.313`. Python's `round()` is banker's
 rounding and returns `.312`; use `int(x*1000 + 0.5)` or equivalent.
+
+## 23. An opposing player carries his club
+
+A table that lists players from another club names that club with its 3-letter
+abbreviation, in the same form the game log and the `Next` tile use (`ATL`,
+`MIN`, `MIL`). A surname on its own is unreadable six weeks later, and by
+midseason these tables hold names from a dozen clubs at once.
+
+Two forms, chosen by the shape of the table:
+
+- **One player per row** &mdash; a `Club` column immediately after the name
+  column, exactly as `Arms Faced` already does (section 16). Where the table
+  mixes both sides (`Every steal`, `Every double play`, `Every plate
+  appearance`), Royals rows read `KC`, so the column is never blank. A `Total`
+  or `None yet` row leaves the cell empty.
+- **Two players per row** &mdash; `Every hit batsman` (batter and pitcher) and
+  `Tough Plays` (batter and fielder) &mdash; tag the opposing name inline as
+  `Riley <span class="tm">ATL</span>` and leave the Royal untagged. A single
+  `Club` column cannot say which of the two it belongs to, and either side of
+  these pairs can be the opponent.
+
+`td .tm` is the muted 10px tag; it is the only styling either form needs.
+
+**Opp Pitching is the exception**, and stays as it is. It runs one table per
+club under an `.opp-head` carrying that club's logo and full name, so a `Club`
+column would repeat one value down every row.
+
+Derive the club from the recaps like everything else (section 8.5): a batter
+belongs to the club that was batting in that half-inning, a pitcher to the club
+he threw for. Check the derivation both ways &mdash; `Lee` is a Braves
+left-hander and a Twins infielder, so the column he sits in decides which club
+he gets.
