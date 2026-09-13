@@ -1166,3 +1166,34 @@ belongs to the club that was batting in that half-inning, a pitcher to the club
 he threw for. Check the derivation both ways &mdash; `Lee` is a Braves
 left-hander and a Twins infielder, so the column he sits in decides which club
 he gets.
+
+## 24. Standings page
+
+`Standings` (`p-standings`) is a tab of its own, placed right after `Schedule`.
+It is copied from the **in-game standings screen**, which the user uploads as a
+photo after each game &mdash; not derived from the recaps, because the other
+clubs' games are not in the notes.
+
+Three parts, in the order the game shows them:
+
+1. **The division table** &mdash; `Team | W | L | PCT | GB | E# | RS | RA | STRK |
+   L10 | DIV | HOME | AWAY | DAY | NIGHT`, one row per club in the game's order,
+   each team cell a 24px `.tlogo` plus the club's nickname. KC's row carries
+   `class="you"`. A dash in the game (`GB` for the leader, `E#` early on) is
+   `&ndash;`; records are `W&ndash;L`.
+2. **Season Statistics** &mdash; five `.sd-tile`s: Average, Slugging, On Base %,
+   Fielding, ERA.
+3. **Team Rankings** &mdash; six `.sd-tile`s: Rank, Contact, Power, Pitching,
+   Defense, Speed, as ordinals (`11th`).
+
+The meta reads `AL Central &middot; through G{n}`, where `n` is the last game KC
+had played when the photo was taken.
+
+**Copy the screen, do not correct it.** Season Statistics are the game's own
+figures and can differ from the page's computed ones (the G9 photo shows `.517`
+slugging against the page's `.514`); publish the game's number and raise the
+difference with the user rather than editing either. Before publishing, check
+KC's row against the page &mdash; `W`, `L`, `RS`, `RA`, `STRK`, `HOME`/`AWAY`
+and `DIV` must match the Overview, the Schedule and `vs. Divisions` &mdash; and
+flag any mismatch. Update the page only when a new photo arrives; never
+extrapolate another club's record from KC's result.
