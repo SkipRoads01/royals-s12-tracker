@@ -1024,7 +1024,7 @@ through moves to `Transactions` and only then changes them.
 `.hl-fig.past` mutes a finished streak. Open offers come first and rejected
 ones last, and the section meta counts them apart (`2 open &middot; 1
 rejected`). Do not delete a rejected offer: a later offer for the same player
-only reads as a second try if the first is still on the page. Where the notes give the budget
+only reads as a second try if the first is still on the page. **A withdrawn offer is handled the same way** &mdash; `past` on the row, a `<span class="chip">Withdrawn</span>` on the kicker, the text moved to the past tense ("KC offered ... then withdrew the offer", "would have moved the budget"). Closed offers sit below open ones, most recently closed first, and the meta counts each kind that is present, leaving out a zero (`1 withdrawn &middot; 2 rejected`). Where the notes give the budget
 effect, it goes in the same row as one bolded figure &mdash; `<b>37.34 to
 34.13 (-3.21)</b>` &mdash; in the units the notes use, stated as conditional
 on the deal being accepted. It changes no other number on the site while the
