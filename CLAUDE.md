@@ -154,6 +154,31 @@ The vocabulary so far:
 Gold marks a rare team accomplishment, blue a game-shape note. A game can carry
 more than one (G15 is both Comeback and Walk-off).
 
+### 6.1 KC pitcher lines on every game card
+
+Every game card's `.recap` opens with a `KC Pitching` table, before the first
+inning paragraph, on every game played and every game published from here on:
+
+```html
+<div class="gp-wrap"><table class="gp"><thead><tr><th>KC Pitching</th><th></th>
+  <th>IP</th><th>H</th><th>R</th><th>ER</th><th>BB</th><th>K</th></tr></thead><tbody>
+  <tr><td><button type="button" class="pname" data-p="krisbubic">Bubic</button></td>
+    <td class="gp-dec">W</td><td>5.1</td><td>5</td><td>0</td><td>0</td><td>0</td><td>4</td></tr>
+</tbody></table></div>
+```
+
+- **One row per KC pitcher, in the order he pitched:** the starter, then each
+  reliever in the order the recap brings him in (`Schreiber pitching`).
+- The unlabelled column is the decision &mdash; `W`, `L`, `SV`, `HLD` or empty.
+  A no-decision is empty, not `ND`.
+- Names are surnames as `pname` buttons (section 11.2), with `(L)` after a
+  left-hander as in `Team Pitching` (section 10.4).
+- The lines are the same ones the Starters and Relievers cards carry for that
+  game; the two must agree. Before publishing, the column sums must match the
+  card's box score &mdash; `R` equals the opponent's runs and `H` its hits &mdash;
+  and the outs in `IP` must equal the innings KC was in the field.
+- `.gp` is not a `.tbl-wrap` table, so it does not sort and has no totals row.
+
 ## 7. Pitching Leaders — "3-Pitch K Looking" tile
 
 The Pitching Leaders grid must carry a `3-Pitch K Looking` tile, placed last,
