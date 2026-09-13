@@ -1192,15 +1192,9 @@ had played when the photo was taken.
 
 **Copy the screen, do not correct it.** Season Statistics are the game's own
 figures and can differ from the page's computed ones (the G9 photo showed `.517`
-slugging against the page's `.514`; it traced to a scoring difference, below); publish the game's number and raise the
+slugging against the page's `.514`); publish the game's number and raise the
 difference with the user rather than editing either. Before publishing, check
 KC's row against the page &mdash; `W`, `L`, `RS`, `RA`, `STRK`, `HOME`/`AWAY`
 and `DIV` must match the Overview, the Schedule and `vs. Divisions` &mdash; and
 flag any mismatch. Update the page only when a new photo arrives; never
 extrapolate another club's record from KC's result.
-
-**The game credits a batter who takes an extra base on the throw with the longer
-hit.** Witt's single in the 3rd of G3 at ATL, on which he took second on the
-throw home, is a double in the game's books; the G9 photo's `.517` slugging
-exposed it, and the page now scores it a double. Score any such play the same
-way: the hit is the base the batter ends the play on.
