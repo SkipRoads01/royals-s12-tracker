@@ -955,10 +955,11 @@ standing at that moment on base.
 meaning the notes establish: `HH` (hard hit), `MS` (middle shift, written out
 as "middle shift (MS)" the first time), `FP` (first pitch), `INF hit`, `TP`
 (written out as "tough play (TP)"), and a count in parentheses before `SB`.
-**`GP` has never been defined.** It marks 3 batted balls and gets its own tile
-and by-batter table, headed simply `GP` &mdash; the page counts the marker
-without claiming to know what it stands for, and the heading gets a real name
-only once the notes give one. Never infer a meaning for it.
+**`GP` is a guessed pitch: the batter guessed both the pitch type and the
+zone.** The user defined it on 2026-09-12. The section is headed `Guessed
+Pitches (Pitch Type + Zone)`; the tile and the by-batter column keep the short
+`GP`. `GZ` (guessed zone only) is a different mechanic and is never counted as
+`GP`.
 
 **Ask about a marker rather than reading past it.** `FB` appeared once, before
 White's steal in the 3rd of G2, and turned out to be a typo for `FP`; the steal
