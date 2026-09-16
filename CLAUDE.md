@@ -533,9 +533,20 @@ genuinely infinite ERA, which is a result rather than a blank.
 
 ## 10.4 Team Batting and Team Pitching column sets
 
-`Team Batting` carries `Batter | AVG | HR | RBI | H | SB | SO | OPS`. `SO` is the
-batter's season strikeouts. It takes **no `lead-cell`** &mdash; that mark means
-best in column, and leading the club in strikeouts is not that.
+`Team Batting` carries `Batter | AVG | HR | RBI | H | SB | SO | RISP | RISP AVG |
+OPS`. `SO` is the batter's season strikeouts. `RISP` is `H-AB` with a runner on
+second or third when the at-bat began, and `RISP AVG` its average.
+
+**RISP is traced from the recaps, a half-inning at a time** &mdash; no box score
+carries the base state. Read the runners as they stood when the batter stepped
+in, not after the play, and count at-bats only: a walk, a hit batsman and a
+sacrifice fly are out of it, while a groundout or a double play that scores a run
+is in. A steal during the at-bat does not put the runner in scoring position for
+that at-bat.
+
+None of `SO`, `RISP` or `RISP AVG` takes a **`lead-cell`** &mdash; that mark means
+best in column, and leading the club in strikeouts is not that, while the RISP
+samples are small enough early that the mark would crown a 3-for-4.
 
 `Team Pitching` carries `Pitcher | POS | W-L | ERA | IP | K | SV | HLD`. `POS` is
 the club's own designation as it appears on the Roster page (`SP`, `RP`, `CP`),
