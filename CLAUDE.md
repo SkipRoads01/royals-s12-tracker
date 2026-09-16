@@ -544,9 +544,10 @@ sacrifice fly are out of it, while a groundout or a double play that scores a ru
 is in. A steal during the at-bat does not put the runner in scoring position for
 that at-bat.
 
-None of `SO`, `RISP` or `RISP AVG` takes a **`lead-cell`** &mdash; that mark means
-best in column, and leading the club in strikeouts is not that, while the RISP
-samples are small enough early that the mark would crown a 3-for-4.
+`RISP AVG` takes a **`lead-cell`** like every other rate column, both rows on a
+tie. `SO` does not &mdash; the mark means best in column, and leading the club in
+strikeouts is not that &mdash; and neither does `RISP` itself, which is a pair
+rather than a single value, exactly as `Arms Faced` leaves `H-AB` unmarked.
 
 `Team Pitching` carries `Pitcher | POS | W-L | ERA | IP | K | SV | HLD`. `POS` is
 the club's own designation as it appears on the Roster page (`SP`, `RP`, `CP`),
