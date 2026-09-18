@@ -866,10 +866,14 @@ which reads as a flicker on a Mac. The blur did not hide that: over a flat
 `--ground` it was worth a mean of 0.7/255. Do not reintroduce either the
 translucency or the filter.
 
-The stamp on the right is **`Through G{n}` over the publish date**, and both
-move with every publish. `Through G1` sat there for three games because it was
-never wired to anything &mdash; treat it as part of the regeneration, not
-decoration.
+The stamp on the right is **`Through G{n}` and nothing else**. It carried the
+publish date on a second line and no longer does: a real-world calendar date is
+outside the season the site covers, so it told the reader nothing. Do not
+reintroduce it, in the stamp or anywhere else on the page.
+
+The game number moves with every publish. `Through G1` sat there for three games
+because it was never wired to anything &mdash; treat it as part of the
+regeneration, not decoration.
 
 ## 18. Schedule rows: wordmarks, and home vs away
 
