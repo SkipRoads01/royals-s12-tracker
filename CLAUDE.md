@@ -357,6 +357,15 @@ a recap generator writes.
   &mdash; "26 of the opponents' 72 hits (36%) have come with 2 strikes". Never
   "opponents have taken 26 of their hits with 2 strikes". A batter takes a
   pitch, a base, or a walk; the verb does not stretch to the hit itself.
+- **A bullet has to know something the reader does not.** The schedule, the
+  record and the streak pill are already on the page, so a line that only reads
+  them back is filler. "KC has won 4 straight and the first 2 at CLE. G12 closes
+  the series" says nothing a reader cannot see in the game log, and the second
+  sentence is the schedule out loud. The win streak is worth a line only when it
+  carries something derived &mdash; "KC has outscored MIL and CLE 26-3 over the
+  4-game win streak" is the same streak with a fact attached. Before keeping a
+  bullet, ask what it tells someone who has already looked at the strip and the
+  schedule; if the answer is nothing, cut it rather than pad it.
 
 ### 8.8 Numerals for stats, and locate every stat in a game or series
 
