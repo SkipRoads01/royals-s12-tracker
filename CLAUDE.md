@@ -635,9 +635,23 @@ genuinely infinite ERA, which is a result rather than a blank.
 
 ## 10.4 Team Batting and Team Pitching column sets
 
-`Team Batting` carries `Batter | AVG | HR | RBI | H | SB | SO | RISP | RISP AVG |
-OPS`. `SO` is the batter's season strikeouts. `RISP` is `H-AB` with a runner on
-second or third when the at-bat began, and `RISP AVG` its average.
+`Team Batting` carries `Batter | AVG | HR | RBI | H | SB | SO | KL | 3PKL |
+RISP | RISP AVG | OPS`. `SO` is the batter's season strikeouts, `KL` the ones
+that ended on a called third strike and `3PKL` the ones that took three pitches
+and ended on a called third strike. `RISP` is `H-AB` with a runner on second or
+third when the at-bat began, and `RISP AVG` its average.
+
+**The three strikeout columns nest**, the same way the pitching tiles do
+(section 7): `3PKL` can never exceed `KL`, and `KL` can never exceed `SO`. They
+count the batter's side of the same events the `Batting Splits` tiles total, so
+each column must sum to its tile &mdash; 86 `SO`, 10 `KL`, 4 `3PKL` through G11
+&mdash; and the per-batter numbers must match that tile's `Batter rundown`.
+Only the verbatim phrasing counts, exactly as section 7 reads it for pitchers:
+a bare `0-2 K` is neither, however few pitches it took.
+
+**Batting Leaders gets no K tiles.** Leading the club in strikeouts looking is
+not an achievement to crown, which is the same reason `SO` takes no
+`lead-cell`; `KL` and `3PKL` take none either.
 
 **RISP is traced from the recaps, a half-inning at a time** &mdash; no box score
 carries the base state. Read the runners as they stood when the batter stepped
