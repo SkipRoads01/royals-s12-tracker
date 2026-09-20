@@ -179,6 +179,68 @@ inning paragraph, on every game played and every game published from here on:
   and the outs in `IP` must equal the innings KC was in the field.
 - `.gp` is not a `.tbl-wrap` table, so it does not sort and has no totals row.
 
+### 6.2 Key plays are coloured; scoring plays are not
+
+A recap is a wall of notation, so the plays that turned an inning carry a
+colour and everything else stays as it is:
+
+| Markup | Holds |
+|---|---|
+| `<strong>` | a play that scored a run &mdash; ordinary ink, bold |
+| `<span class="kp good">` | a key play that scored nobody and helped KC &mdash; green |
+| `<span class="kp bad">` | a key play that scored nobody and hurt KC &mdash; red |
+
+**A run scoring outranks the colour.** A KC home run and an opponent's
+2-run double are both `<strong>` in the plain ink, however good or bad the
+play was for the club. The two colours are for what the score does not
+already say, so a coloured span never sits inside a `<strong>`, and
+`<strong>` never marks anything but a run &mdash; two bolded non-scoring
+plays (Cameron's `E1` and the wild pitch in the 4th of G4, Garcia's double
+in the 6th of G5) were turned into `.kp` spans for exactly that reason.
+
+**Green and red are read from KC's side, not the batter's.** A double play
+KC turns is green and one KC hits into is red, though both are `6-4-3 DP`.
+So the half-inning decides the sign, and the half-inning depends on the
+venue: `TOP` is KC batting on the road and the opponent batting at home.
+A `TP` in a KC at-bat is the other club's fielder robbing a Royal, which is
+red; the same `TP` an inning later is Witt going to his knees, which is
+green.
+
+What earns a colour, all of it non-scoring: an error either way, a double
+play, a runner thrown out or caught stealing, a steal that sets up a run, a
+strikeout or a groundout that strands the tying run, a tough play, an
+extra-base hit that goes nowhere, a bases-loaded escape.
+
+**Be selective.** Aim for roughly 6&ndash;9 in a game, weighted to the
+innings that decided it &mdash; not every out. A recap with a colour on
+every line is a highlighter accident and tells the reader nothing. The
+figures on the `Errata` page are unaffected: the markers (`HH`, `MS`, `FP`,
+`TP`, `GP`, the counts) sit inside the spans and still read normally.
+
+### 6.3 Game Notes on the card
+
+The game notes carry a short list of per-game observations under the
+inning-by-inning log &mdash; who went 3-4, how many struck out on each side, an
+error streak ending. They belong on the card, in a `.gnotes` block between the
+`KC Pitching` table and the first inning paragraph:
+
+```html
+<div class="gnotes"><div class="gn-k">Game Notes</div><ul>
+  <li>KC scored 8 runs on 13 hits.</li>
+</ul></div>
+```
+
+- **Reported as given, never extrapolated from**, the same rule `News` follows
+  (section 20). Tense moves to the past once the game is over, a plain typo is
+  fixed, and nothing else changes &mdash; do not restate a note in house voice,
+  and do not derive a new one.
+- **A game with no notes gets no block.** G6 has none; it renders without one
+  rather than with an empty heading, exactly as an empty `tags` span is omitted
+  (section 6).
+- The figures still have to agree with the rest of the card. Every strikeout
+  count in the notes so far matches the `K` column of the `KC Pitching` table
+  above it, and the hit and run totals match the box score.
+
 ## 7. Pitching Leaders — "3-Pitch K Looking" tile
 
 The Pitching Leaders grid must carry a `3-Pitch K Looking` tile, placed last,
