@@ -511,6 +511,7 @@ did, in that order left to right:
 |---|---|---|
 | beside the game number | the pitcher's own result | `<span class="pdec">(W, 1&ndash;0)</span>` or a `.dec` chip |
 | beside the opponent | the team's result in that game | `<span class="gout w">W</span>` |
+| right of the result chip | the game's final score | `<span class="gsc num">5&ndash;2</span>` |
 
 **The pitcher's decision sits next to `G{n}`.** A win or a loss reads as plain
 text with his record after that game &mdash; `(W, 1&ndash;0)`, `(L, 0&ndash;1)`
@@ -526,6 +527,17 @@ this chip.** A pitcher can lose a game his club won and win one he was charged
 nothing for, so the two slots disagree often; that is the point of showing
 both. `.dec.w` and `.dec.l` no longer exist &mdash; a decision is never a
 coloured chip.
+
+**The final score follows the chip**, as `<span class="gsc num">5&ndash;2</span>`
+&mdash; **KC's runs first**, whether KC won or lost, the same order the game
+log's box table lists them in. A `W` or an `L` says how the game came out but
+not what it was, and `(L, 0&ndash;1)` beside it is the pitcher's record rather
+than the score, so the line carried neither until this was added. `.gsc` is
+plain ink and tabular numerals; the colour stays on the chip.
+
+This applies to the pitcher cards in `Starters` and `Relievers`, on every game
+line including one a reliever left with no decision. `POG` cards use the same
+`.start` markup and do not carry a score.
 
 The `.g` column is `84px` wide to hold `G3 (W, 1&ndash;0)`, and takes
 `align-self: start` so the game number lines up with the opponent rather than
