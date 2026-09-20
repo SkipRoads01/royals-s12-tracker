@@ -206,16 +206,35 @@ A `TP` in a KC at-bat is the other club's fielder robbing a Royal, which is
 red; the same `TP` an inning later is Witt going to his knees, which is
 green.
 
-What earns a colour, all of it non-scoring: an error either way, a double
-play, a runner thrown out or caught stealing, a steal that sets up a run, a
-strikeout or a groundout that strands the tying run, a tough play, an
-extra-base hit that goes nowhere, a bases-loaded escape.
+**A play needs a runner to be a key play.** This is the test, and it is not
+a matter of taste:
 
-**Be selective.** Aim for roughly 6&ndash;9 in a game, weighted to the
-innings that decided it &mdash; not every out. A recap with a colour on
-every line is a highlighter accident and tells the reader nothing. The
-figures on the `Errata` page are unaffected: the markers (`HH`, `MS`, `FP`,
-`TP`, `GP`, the counts) sit inside the spans and still read normally.
+1. a runner was on base when the play happened, or
+2. the play itself put a runner on or took one off &mdash; an error, a
+   steal, a caught stealing, a pickoff, a man thrown out stretching,
+   reaching on a dropped third strike, or
+3. it was an extra-base hit, which puts a runner in scoring position
+   whether or not he came around.
+
+**Nothing else is marked, however good it looked.** A diving stop with the
+bases empty is a fine play and an ordinary out: it did not change the
+inning, so it gets no colour. `Collins 1-2 4-3 TP` in the 5th of G11 at CLE
+was the third out with nobody on and was wrongly red; so were 8 other
+fielding gems on empty bases, and all 9 came off. The play type never
+decides this &mdash; a `TP` with a man on second is green, the same `TP`
+with the bases empty is nothing.
+
+What passes the test, all of it non-scoring: an error either way, a double
+play, a runner thrown out or caught stealing, a steal, a strikeout or a
+groundout that strands a runner, a tough play with someone aboard, an
+extra-base hit, a bases-loaded escape.
+
+**Be selective inside that.** Roughly 6&ndash;8 in a game, weighted to the
+innings that decided it. A recap with a colour on every line is a
+highlighter accident and tells the reader nothing. The figures on the
+`Errata` page are unaffected: the markers (`HH`, `MS`, `FP`, `TP`, `GP`,
+the counts) sit inside the spans and still read normally, and a `TP` that
+goes unmarked is still a tough play in that section's count.
 
 ### 6.3 Game Notes on the card
 
