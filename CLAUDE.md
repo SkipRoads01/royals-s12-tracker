@@ -1093,6 +1093,11 @@ Pitches (Pitch Type + Zone)`; the tile and the by-batter column keep the short
 `GP`. `GZ` (guessed zone only) is a different mechanic and is never counted as
 `GP`.
 
+**`HAR` is a hit and run** (the user confirmed it on 2026-10-08; first on the
+site in Collins's single in the 3rd of G13 vs. CWS). It describes the play call,
+not the result: the at-bat counts by its outcome like any other, and no section
+tallies hit and runs.
+
 **Ask about a marker rather than reading past it.** `FB` appeared once, before
 White's steal in the 3rd of G2, and turned out to be a typo for `FP`; the steal
 was a first-pitch steal all along. Flag anything unfamiliar instead of filing it
