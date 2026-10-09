@@ -467,7 +467,10 @@ a recap generator writes.
   and G2 at ATL, then singled twice in G3", not the opponent three times in one
   sentence. **"through three games" is too vague** for a season total &mdash;
   use `at ATL` / `vs. MIN` when the whole total came in one series, or `last 3
-  games` / `last 5 games` when it did not.
+  games` / `last 5 games` when it did not. A `last N games` span or a running
+  streak stands on its own: write "over the last 11 games" or "over the
+  8-game win streak", without a "G5 vs. MIN through G15 vs. CWS" range after
+  it (the user's call, 2026-10-09).
 - **Call them `KC pitchers`, not "the staff".** `Staff` stays as the totals-row
   label in `Opp Pitching` and in the `Staff rundown` hints, where it is a table
   heading rather than prose.
