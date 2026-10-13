@@ -229,6 +229,13 @@ play, a runner thrown out or caught stealing, a steal, a strikeout or a
 groundout that strands a runner, a tough play with someone aboard, an
 extra-base hit, a bases-loaded escape.
 
+**The user's own picks come first.** The user bolds the plays they consider key
+in their notes, but pasted text loses the bold. When the notes arrive with a
+screenshot, read the bold from the image and mark exactly those plays &mdash; a
+bolded play that scored a run is a `<strong>`, any other is a `.kp` span coloured
+from KC's side &mdash; and add none of your own. Without a screenshot, choose
+them by the test above.
+
 **Be selective inside that.** Roughly 6&ndash;8 in a game, weighted to the
 innings that decided it. A recap with a colour on every line is a
 highlighter accident and tells the reader nothing. The figures on the
@@ -1103,7 +1110,8 @@ tallies hit and runs.
 
 **Ask about a marker rather than reading past it.** `FB` appeared once, before
 White's steal in the 3rd of G2, and turned out to be a typo for `FP`; the steal
-was a first-pitch steal all along. Flag anything unfamiliar instead of filing it
+was a first-pitch steal all along. It recurred in G16 ("Acuna FB SB, 1-0") and is read
+the same way. Flag anything unfamiliar instead of filing it
 under "not recorded".
 
 **`BASES LOADED` is a marker at a point in time, not a state the notes keep
