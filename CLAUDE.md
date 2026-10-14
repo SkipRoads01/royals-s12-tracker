@@ -131,6 +131,13 @@ Markup: a `.hl-card` wrapper holding one `.hl` row per headline:
   number the sentence does not use, and let the `hl-k` kicker name what it is:
   a `4` over `Strikeouts in relief` beside a sentence about innings and the win,
   a `0` over `Earned runs` beside a sentence about 7 hits in 4.2 innings.
+- **The figure belongs to the sentence beside it.** A reader must be able to
+  tell what the number counts without guessing. Prefer a figure from the same
+  game the sentence describes (`4` over `Strikeouts` beside Ragans's 5
+  innings). When the figure is a season total, the kicker says so &mdash;
+  `Steals this season`, not `Stolen bases` &mdash; and never pair a season
+  total with a sentence about one game under a bare kicker: `27` over `Hits`
+  beside "2 of the 6 KC hits" reads as 27 hits in that game.
 - Aim for ~6 rows, active/positive items first, past-tense items last.
 
 **Derive streaks from the recaps, never by assumption.** A streak spans games
