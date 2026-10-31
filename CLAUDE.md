@@ -255,7 +255,7 @@ goes unmarked is still a tough play in that section's count.
 The game notes carry a short list of per-game observations under the
 inning-by-inning log &mdash; who went 3-4, how many struck out on each side, an
 error streak ending. They belong on the card, in a `.gnotes` block between the
-`KC Pitching` table and the first inning paragraph:
+`Storylines` block (section 6.4) and the first inning paragraph:
 
 ```html
 <div class="gnotes"><div class="gn-k">Game Notes</div><ul>
@@ -273,6 +273,32 @@ error streak ending. They belong on the card, in a `.gnotes` block between the
 - The figures still have to agree with the rest of the card. Every strikeout
   count in the notes so far matches the `K` column of the `KC Pitching` table
   above it, and the hit and run totals match the box score.
+
+### 6.4 Storylines on the card
+
+Every game card carries a `Storylines` block: the interesting facts and moments
+of that game. It uses the same `.gnotes` markup as `Game Notes` and sits
+directly above it, between the `KC Pitching` table and `Game Notes` (or the
+first inning paragraph when a game has no notes):
+
+```html
+<div class="gnotes"><div class="gn-k">Storylines</div><ul>
+  <li>Santana 3 HR game.</li>
+</ul></div>
+```
+
+- **When the user's notes include `Storylines:`, those are the storylines**,
+  reported as given under the same rule as `Game Notes` (section 6.3): tense
+  moves to the past, a plain typo is fixed, and nothing else changes. Two facts
+  run together in one line may be split into two bullets.
+- **When they do not, write 2&ndash;4 from the recap** (the user asked for one on
+  every card on 2026-10-31, and G1&ndash;G16 were written this way). Each line
+  is a turning point or a moment: who broke a tie, a jam escaped, a starter's
+  line against KC, a run of strikeouts. Section 8's voice and sourcing rules
+  apply, and every figure must be derivable from that game's recap or tables.
+  The card already names the game, so a line does not repeat `in G3 at ATL`.
+- **Do not repeat the card.** A storyline does not restate a `Game Notes` line
+  or the `KC Pitching` table beside it. It adds what they leave out.
 
 ## 7. Pitching Leaders — "3-Pitch K Looking" tile
 
@@ -839,15 +865,16 @@ game's notes, so most rows never have them.
 A game **with** notes becomes a dropdown; a game without one stays a plain
 `div.sgame` row. Never emit an empty dropdown.
 
-**The heading inside the dropdown reads `Line-up Changes`** (`.rn-k` uppercases
-it). It used to say `Roster Notes`; do not go back to that.
+**The heading inside the dropdown reads `Lineup Notes`** (`.rn-k` uppercases
+it). It used to say `Roster Notes`, then `Line-up Changes`; do not go back to
+either (the user's call, 2026-10-31).
 
 ```html
 <details class="sgamed next"><summary class="sgame"><span class="g">G3</span>
   <span class="mu"><span class="loc">@</span> <span class="opp">ATL</span></span>
   <div class="out"><span class="nextchip">Next</span></div>
   <span class="chev">&rsaquo;</span></summary>
-  <div class="rnotes"><div class="rn-k">Line-up Changes</div>
+  <div class="rnotes"><div class="rn-k">Lineup Notes</div>
     <p>Garcia has been moved to CF, with Pasquantino taking 3B and Isbel sitting.</p>
   </div></details>
 ```
@@ -1143,9 +1170,10 @@ holds two sections, in this order:
 |---|---|
 | Transactions | completed roster moves &mdash; signings, call-ups, options, demotions, injuries, trades that went through |
 | Proposed Trades | offers that have not been accepted, newest first |
-| Line-up Changes | every pre-game line-up note on the site, newest game first |
+| Lineup Notes | every pre-game lineup note on the site, newest game first |
 
-**`Line-up Changes` is a mirror, not a second source.** The same note is attached
+**`Lineup Notes` is a mirror, not a second source.** It carries the same
+name as the Schedule dropdown heading (section 12). The same note is attached
 to its game's row in the `Schedule` panel (section 12) and repeated here, so a
 note is written once and appears in both places with identical wording. Add a
 game to one and it goes in the other; never let the two drift.
