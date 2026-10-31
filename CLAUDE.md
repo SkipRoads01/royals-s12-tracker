@@ -975,6 +975,14 @@ disclosure under the record &mdash; `<details class="chd"><summary>List</summary
 as the season does. Opponents stay anonymous
 by design.
 
+The catcher list gives each catcher's own record, accepted&ndash;denied
+(`Perez 13&ndash;6`, `Jensen 3&ndash;1`), and the two must sum to the row (the
+user's call, 2026-10-31). Every figure in the table is counted from the `BCA`,
+`BCD`, `CCA` and `CCD` markers in the recaps, read by half-inning: a `C` code
+while the opponent bats is KC's catcher, a `B` code while KC bats is a Royal.
+Re-count the whole table from the recaps when in doubt rather than adding to
+the old figures; through G16 the table had drifted from the recaps on every row.
+
 A batter challenge is attributed to the batter named in the recap. A catcher
 challenge belongs to whoever was catching, and **Perez is the catcher unless the
 pre-game roster notes say otherwise** &mdash; Jensen is the backup and a start
