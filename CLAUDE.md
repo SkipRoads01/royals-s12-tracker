@@ -977,7 +977,8 @@ by design.
 
 The catcher list gives each catcher's own record, accepted&ndash;denied
 (`Perez 13&ndash;6`, `Jensen 3&ndash;1`), and the two must sum to the row (the
-user's call, 2026-10-31). Every figure in the table is counted from the `BCA`,
+user's call, 2026-10-31). The batter and runner lists use the same
+accepted&ndash;denied form (`Santana 2&ndash;2`), most challenges first. Every figure in the table is counted from the `BCA`,
 `BCD`, `CCA` and `CCD` markers in the recaps, read by half-inning: a `C` code
 while the opponent bats is KC's catcher, a `B` code while KC bats is a Royal.
 Re-count the whole table from the recaps when in doubt rather than adding to
