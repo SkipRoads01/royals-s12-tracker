@@ -123,7 +123,8 @@ Markup: a `.hl-card` wrapper holding one `.hl` row per headline:
   share a right edge and every headline's text starts at the same x.
 - Add `past` to the figure (`class="hl-fig num past"`) for anything in the past
   tense — a snapped streak, a cold stretch. It renders muted instead of blue so
-  those items recede.
+  those items recede. Its kicker says the thing is over: `Hit streak ended`,
+  not `Hit streak`, which beside a `10` reads as a streak still running.
 - The figure carries the number; the sentence must add NEW information rather
   than restating it (write "extended it with a 3-for-4 night", not "riding a
   12-game streak" next to a `12`). **Nothing is repeated** &mdash; if the
