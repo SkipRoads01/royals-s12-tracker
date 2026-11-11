@@ -1390,3 +1390,30 @@ KC's row against the page &mdash; `W`, `L`, `RS`, `RA`, `STRK`, `HOME`/`AWAY`
 and `DIV` must match the Overview, the Schedule and `vs. Divisions` &mdash; and
 flag any mismatch. Update the page only when a new photo arrives; never
 extrapolate another club's record from KC's result.
+
+## 25. Team Rankings: the `MLB` tab and `vs. Ranked`
+
+The in-game standings screen shows every club's **Team Rankings** (Rank,
+Contact, Power, Pitching, Defense, Speed), league-wide from 1st to 30th. The
+user photographs all 30 clubs' screens. **Only the ranks are kept.** The
+Season Statistics on those screens change too often to be worth carrying, so
+they are not copied for any club but KC (whose tiles stay on `Standings`,
+section 24).
+
+**`MLB`** (`p-mlb`) is a tab of its own, right after `Standings`. It holds two
+`.tbl-wrap` tables, `American League` then `National League`, each with
+`Team | Rank | Contact | Power | Pitching | Defense | Speed`, one row per club
+with its 24px `.tlogo` and nickname (the `.sd-team` cell `Standings` uses), KC's
+row `class="you"`, rows in Rank order. Ranks are ordinals (`11th`). Every column
+sorts, and the sort reads an ordinal as its number and puts 1st on top on the
+first click. The section meta reads `team rankings &middot; through G{n}`.
+
+**`vs. Ranked`** tiers the clubs by that same current `Rank`, not the preseason
+roster ranking it used through G16: Top 1&ndash;10, Mid 11&ndash;20, Lower
+21&ndash;30, each club's row carrying its current rank and KC's season record
+against it (copied from `vs. Divisions`), and each tier's record the sum of its
+rows. The meta reads `team rank through G{n} &middot; KC record per tier`.
+
+**Check before publishing:** in each of the six columns, every rank from 1 to
+30 appears exactly once. A gap or a repeat means a misread photo. Update both
+tabs together, and only when a new set of photos arrives.
