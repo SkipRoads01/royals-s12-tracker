@@ -177,8 +177,9 @@ inning paragraph, on every game played and every game published from here on:
 
 - **One row per KC pitcher, in the order he pitched:** the starter, then each
   reliever in the order the recap brings him in (`Schreiber pitching`).
-- The unlabelled column is the decision &mdash; `W`, `L`, `SV`, `HLD` or empty.
-  A no-decision is empty, not `ND`.
+- The unlabelled column is the decision &mdash; `W`, `L`, `SV`, `HLD`, `BS` or
+  empty. A no-decision is empty, not `ND`. `BS` (blown save) is taken from the
+  notes (`Falter (BS, 1)` in G19) and never inferred.
 - Names are surnames as `pname` buttons (section 11.2), with `(L)` after a
   left-hander as in `Team Pitching` (section 10.4).
 - The lines are the same ones the Starters and Relievers cards carry for that
@@ -640,8 +641,8 @@ did, in that order left to right:
 
 **The pitcher's decision sits next to `G{n}`.** A win or a loss reads as plain
 text with his record after that game &mdash; `(W, 1&ndash;0)`, `(L, 0&ndash;1)`
-&mdash; carrying no colour of its own. `ND`, `SV` and `HLD` stay as `.dec`
-chips, the grey `ND` box included. A starter always shows something here,
+&mdash; carrying no colour of its own. `ND`, `SV`, `HLD` and `BS` stay as `.dec`
+chips, the grey `ND` box included (`.dec.bs` is tinted with `--loss`). A starter always shows something here,
 `ND` included, since a start with no decision is still a fact about the start;
 a reliever shows something only when he earned it, so an ordinary
 middle-innings outing leaves the slot empty.
