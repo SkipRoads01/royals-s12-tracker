@@ -1418,3 +1418,11 @@ rows. The meta reads `team rank through G{n} &middot; KC record per tier`.
 **Check before publishing:** in each of the six columns, every rank from 1 to
 30 appears exactly once. A gap or a repeat means a misread photo. Update both
 tabs together, and only when a new set of photos arrives.
+
+**The ranks move, but slowly.** KC's went from 11th/12th/7th/11th/3rd/18th at
+G11 to 12th/11th/15th/11th/2nd/12th at G12, the build that also carried the
+Wallner-for-Kim trade and the roster moves, and only Speed moved (12th to 11th)
+between G16 and G18. League-wide, only two pairs swapped places between the
+preseason ranking and G18. So a full set of 30 photos is needed every few weeks
+or after a big trade, not after every game (the user's call, 2026-11-12). Until
+one arrives, both tabs keep the last set and their meta keeps its `through G{n}`.
