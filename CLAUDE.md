@@ -1452,3 +1452,9 @@ times, KC behind in the 8th, won in the 10th to finish a sweep), G13 vs. CWS
 the 9th, walk-off in the 10th). Blowouts and milestone games (Santana's 3 homers
 in G17, the 15&ndash;0 G9) do not qualify on that alone. Propose a new candidate
 to the user when a game fits; add it once they agree.
+
+**The recap reads at the same size on both tabs.** iPhone Safari enlarges text
+it judges to be long-form reading, and the GOTYs write-ups pushed the cloned
+recaps into that, so they rendered larger than in the game log. The page's
+`html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }` turns that
+off. Do not remove it.

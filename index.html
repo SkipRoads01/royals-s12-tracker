@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="build" content="20261113-011753">
+<meta name="build" content="20261113-030700">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#1a5fa8">
 <link rel="apple-touch-icon" href="icon-192.png">
@@ -64,6 +64,9 @@
   }
 
   * { box-sizing: border-box; }
+  /* Stop iPhone Safari enlarging text in long-prose blocks (it inflated the
+     cloned recaps on the GOTYs tab). */
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   body {
     margin: 0;
     background: var(--ground);
