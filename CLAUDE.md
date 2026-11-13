@@ -1427,3 +1427,28 @@ between G16 and G18. League-wide, only two pairs swapped places between the
 preseason ranking and G18. So a full set of 30 photos is needed every few weeks
 or after a big trade, not after every game (the user's call, 2026-11-12). Until
 one arrives, both tabs keep the last set and their meta keeps its `through G{n}`.
+
+## 26. GOTYs tab: Game of the Year Candidates
+
+`GOTYs` (`p-goty`) is a tab right after `POG`, headed `Game of the Year
+Candidates`, its meta a count (`3 candidates`). Each candidate is a `.goty`
+block, newest first, holding two things:
+
+1. **The game's bar**, the same `details.gamed` card the Overview game log
+   carries (chips, box score, and the recap when it is opened). It is **not
+   copied into the HTML**: the block holds an empty `<div class="games"
+   data-goty="G19"></div>`, and a small script at the end of the page clones the
+   matching game-log card into it on load. The game log stays the one source, so
+   a corrected recap or box score shows here without a second edit.
+2. **A write-up**, `<p class="goty-why">`, saying what made the game special:
+   how it turned, how often it was tied or the lead changed, the late swings,
+   who delivered them. Section 8's voice and sourcing rules apply, and every
+   figure is derived from that game's recap.
+
+**What qualifies.** Come-from-behind wins and games with ties or lead changes
+late, the user's call on 2026-11-13. The first three are G19 at DET (tied 3
+times, KC behind in the 8th, won in the 10th to finish a sweep), G13 vs. CWS
+(down 3&ndash;0 in the 1st, tied twice) and G6 vs. MIN (down 2&ndash;0, tied in
+the 9th, walk-off in the 10th). Blowouts and milestone games (Santana's 3 homers
+in G17, the 15&ndash;0 G9) do not qualify on that alone. Propose a new candidate
+to the user when a game fits; add it once they agree.
