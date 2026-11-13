@@ -616,8 +616,10 @@ counting columns and `N/A` for ERA, WHIP, K/9 and BAA, which have no value at
 0 IP. **Neither panel carries a subtitle** &mdash; do not reintroduce
 `5 of 5 used` or `8 of 8 used`. The cards themselves say who has pitched.
 
-Each reliever's `starter-tot` chips read `G`, then `IP`, then any `SV` or
-`HLD`, then `K` &mdash; `2 G`, `5.1 IP`, `1 HLD`, `7 K`. Starters keep
+Each reliever's `starter-tot` chips read `G`, then `IP`, then `SV`, then any
+`HLD`, then `K` &mdash; `2 G`, `5.1 IP`, `0 SV`, `1 HLD`, `7 K`. **`SV` is on
+every reliever card, `0 SV` included** (the user's call, 2026-11-13); `HLD`
+appears only once earned. Starters keep
 `Team W-L`, `K`, `HRA` instead.
 
 **`Relievers` is sorted by innings pitched, most to least.** Ties keep first
