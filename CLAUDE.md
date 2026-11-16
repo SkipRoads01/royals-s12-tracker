@@ -141,6 +141,12 @@ Markup: a `.hl-card` wrapper holding one `.hl` row per headline:
   beside "2 of the 6 KC hits" reads as 27 hits in that game.
 - Aim for ~6 rows, active/positive items first, past-tense items last.
 
+**Hit streaks go in on every publish** (the user's call, 2026-11-16). Recompute
+every Royal's hitting streak from the recaps after each game. Each active streak
+of 3 or more games gets a `Hit streak` row, and a streak of 3 or more that ended
+in the latest game gets a `Hit streak ended` row. Through G20, those were Witt's
+active 10-game streak (G11&ndash;G20), Pasquantino's 3, and Garcia's 6 that ended in G20.
+
 **Derive streaks from the recaps, never by assumption.** A streak spans games
 the player actually appeared in — a game missed does not break it (Perez's
 12-game streak skips G10, when he did not play). Verify any derivation against
