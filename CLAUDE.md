@@ -1271,6 +1271,15 @@ is why a promoted arm shows up in `Relievers` (section 10.1 lists the whole
 staff) but not in `Team Pitching` until he throws a pitch. Do not add a
 0-line row to either table to fill the gap.
 
+**A player designated for assignment** (Lane Thomas, after G21) gets a
+`Transactions` row with `DFA` in the `news-g` column and no mark, since he is
+going nowhere yet, under a `Designated` kicker. His `Roster` row reads
+`DFA` in `League` and `No` in `40-Man`, and the Roster meta's 40-man count
+drops by one. Like a demoted player, he keeps his big-league card and his
+`Team Batting` or `Team Pitching` line, and only his card's note changes. A
+player called up to replace him gets the full big-league card of section 11:
+MLB headshot, stat tiles at `0` / `N/A`, and `Has not played.`
+
 A promotion or demotion inside the minors changes three things and nothing
 else: the `League` cell in the `Roster` table, the affiliate logo class on the
 player's card (`.mlogo.lv-aaa` / `lv-aa` / `lv-a`), and the affiliate and
