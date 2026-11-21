@@ -1501,7 +1501,7 @@ off. Do not remove it.
 
 | Section | Holds |
 |---|---|
-| Most Starts by Position | a field diagram (`.lu-diamond`): at each position, the player with the most starts there, his `GS`, and up to 2 others. Any players beyond those read `+N more`. DH sits in a dashed box in the bottom-left corner. |
+| Most Starts by Position | a field diagram (`.lu-diamond`): at each position, the player with the most starts there, his `GS`, and up to 2 others. Any players beyond those sit behind a `+N` chip, a `<details class="lu-more">` that opens a small list of their names and starts (no "more" wording, the user's call, 2026-11-21). One list opens at a time, and a tap elsewhere closes it. DH sits in a dashed box in the bottom-left corner. |
 | Batting Order | a heat grid (`.lu-grid`), one row per player and one column per lineup spot 1&ndash;9, each cell the number of starts there, shaded `h1`&ndash;`h5` by count, plus a `GS` column |
 | Positions | the same grid with columns `C 1B 2B 3B SS LF CF RF DH` |
 
