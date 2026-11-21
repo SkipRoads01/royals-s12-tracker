@@ -1475,3 +1475,11 @@ it judges to be long-form reading, and the GOTYs write-ups pushed the cloned
 recaps into that, so they rendered larger than in the game log. The page's
 `html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }` turns that
 off. Do not remove it.
+
+## 27. Pending reminders
+
+- **40-man opening (set 2026-11-21, after G21).** Lane Thomas's DFA left the
+  40-man at 39, and the user plans to add someone. When publishing **G24**,
+  check the Roster meta: if it still reads `39 on the 40-man`, remind the user
+  in the reply. Remove this item once the spot is filled or the reminder has
+  been given.
