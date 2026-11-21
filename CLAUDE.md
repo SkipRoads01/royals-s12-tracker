@@ -1487,3 +1487,43 @@ off. Do not remove it.
   check the Roster meta: if it still reads `39 on the 40-man`, remind the user
   in the reply. Remove this item once the spot is filled or the reminder has
   been given.
+
+## 28. Lineups tab
+
+`Lineups` (`p-lineups`) is a tab right after `News` (the user's request,
+2026-11-21). It holds four sections, in this order:
+
+| Section | Holds |
+|---|---|
+| Most Starts by Position | a field diagram (`.lu-diamond`): at each position, the player with the most starts there, his `GS`, and up to 2 others (`+N` beyond that). DH sits in a dashed box in the bottom-left corner. |
+| Batting Order | a heat grid (`.lu-grid`), one row per player and one column per lineup spot 1&ndash;9, each cell the number of starts there, shaded `h1`&ndash;`h5` by count, plus a `GS` column |
+| Positions | the same grid with columns `C 1B 2B 3B SS LF CF RF DH` |
+| Game by Game | one `.lu-game` card per game, newest first: the 9 starters in batting order, each chip showing spot, position and surname (`pname` button); a `.lu-subs` line for pinch-hitters and pinch-runners; and that game's Lineup Note in a collapsed `.lu-note` |
+
+**Update it on every publish.** Add the new game's card, and recount both grids
+and the diamond.
+
+**The batting order** is the order the first 9 Royals bat in the recap. It has
+been checked against every Lineup Note that names a spot.
+
+**Positions come from, in priority order:**
+
+1. the Lineup Notes
+2. the user's answers (G21: Garcia CF, Collins 2B, Lowe DH, Pasquantino 3B)
+3. fielders the site already credits for that game (tough plays, errors)
+4. the standing defaults below
+
+The defaults:
+
+- Perez catches unless a note says otherwise (section 16).
+- Isbel plays CF.
+- Robles plays RF.
+- Marte plays LF when Robles is in the lineup (the G18 note), and RF when he
+  is not.
+- Thomas plays LF next to Isbel.
+- Collins plays 2B when Lowe is not at 2B, and LF otherwise.
+- A second catcher or first baseman is the DH.
+
+Every game must come out with exactly one player at each of the 9 spots. The
+user saw these defaults when the tab was built. A game the defaults cannot
+settle is asked about, not guessed.
