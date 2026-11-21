@@ -1497,17 +1497,21 @@ off. Do not remove it.
 ## 28. Lineups tab
 
 `Lineups` (`p-lineups`) is a tab right after `News` (the user's request,
-2026-11-21). It holds four sections, in this order:
+2026-11-21). It holds three sections, in this order:
 
 | Section | Holds |
 |---|---|
-| Most Starts by Position | a field diagram (`.lu-diamond`): at each position, the player with the most starts there, his `GS`, and up to 2 others (`+N` beyond that). DH sits in a dashed box in the bottom-left corner. |
+| Most Starts by Position | a field diagram (`.lu-diamond`): at each position, the player with the most starts there, his `GS`, and up to 2 others. Any players beyond those read `+N more`. DH sits in a dashed box in the bottom-left corner. |
 | Batting Order | a heat grid (`.lu-grid`), one row per player and one column per lineup spot 1&ndash;9, each cell the number of starts there, shaded `h1`&ndash;`h5` by count, plus a `GS` column |
 | Positions | the same grid with columns `C 1B 2B 3B SS LF CF RF DH` |
-| Game by Game | one `.lu-game` card per game, newest first: the 9 starters in batting order, each chip showing spot, position and surname (`pname` button); a `.lu-subs` line for pinch-hitters and pinch-runners; and that game's Lineup Note in a collapsed `.lu-note` |
 
-**Update it on every publish.** Add the new game's card, and recount both grids
-and the diamond.
+**No game-by-game list.** A per-game lineup card was built and then removed (the
+user's call, 2026-11-21): over 162 games it would be too long to use. Do not
+add it back unless asked.
+
+**Update it on every publish.** Add the new game's starters to both grids and
+recount the diamond. Each column of the Positions grid must sum to the games
+played.
 
 **The batting order** is the order the first 9 Royals bat in the recap. It has
 been checked against every Lineup Note that names a spot.
