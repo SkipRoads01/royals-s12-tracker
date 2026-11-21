@@ -628,6 +628,12 @@ every reliever card, `0 SV` included** (the user's call, 2026-11-13); `HLD`
 appears only once earned. Starters keep
 `Team W-L`, `K`, `HRA` instead.
 
+**Both kinds end with an `ER` chip** (the user's call, 2026-11-21): `6 ER` on a
+reliever after `K`, and `11 ER` on a starter after `HRA`. It is the season
+earned-run total from the pitcher's Roster card, `0 ER` for an arm who has not
+allowed one. The chips across both panels must sum to the team's earned runs
+(48 through G21).
+
 **`Relievers` is sorted by innings pitched, most to least.** Ties keep first
 appearance order, and an arm that has not pitched has 0.0 IP so it falls to the
 bottom on its own; order those among themselves by the roster. Re-sort on every
