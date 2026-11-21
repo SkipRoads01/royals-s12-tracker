@@ -1273,7 +1273,9 @@ staff) but not in `Team Pitching` until he throws a pitch. Do not add a
 
 **A player designated for assignment** (Lane Thomas, after G21) gets a
 `Transactions` row with `DFA` in the `news-g` column and no mark, since he is
-going nowhere yet, under a `Designated` kicker. His `Roster` row reads
+going nowhere yet, under a `Designated` kicker. That cell is
+`<span class="news-g dfa">`: centered vertically in the row and coloured dark
+red, `color-mix(in srgb, var(--loss) 72%, #000)` (the user's call, 2026-11-21). His `Roster` row reads
 `DFA` in `League` and `No` in `40-Man`, and the Roster meta's 40-man count
 drops by one. Like a demoted player, he keeps his big-league card and his
 `Team Batting` or `Team Pitching` line, and only his card's note changes. A
