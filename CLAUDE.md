@@ -1173,10 +1173,12 @@ while the notes themselves say the bases stayed loaded &mdash; Garcia's "F9, no
 tag" in G2 leaves them loaded for Witt, while a hit or a run scoring ends the
 situation. Never infer a base state the notes do not state.
 
-**A missing count reads `Not recorded`.** Nothing carries that label today
-&mdash; every count in the notes has been resolved &mdash; but if one is ever
-genuinely absent, give it its own row or bucket so the totals still add up, and
-ask rather than imputing a value. The count is not always in parentheses beside
+**A missing count is asked about, not filed away.** The `Hits by Count` table
+carries no `Not recorded` row (the user's call, 2026-11-21: "that shouldn't be
+there"). One sat there from G16 until Meidroth's bloop single in the 6th of G16
+vs. CWS was resolved as `1-2`. When a hit arrives without a count, ask the user
+for it before publishing, the way Grichuk's `1-2` in the 4th of G21 was asked
+for. Never impute a value. The count is not always in parentheses beside
 the `SB`: on Harris's steal in the 4th of G2 it is the `1-2` on his own line
 just before it.
 
